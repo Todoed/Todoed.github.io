@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="keyword" content="todoed">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
@@ -23,15 +22,31 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 <style type="text/css">
-input{ 
-  max-width: 200px;
-    padding:initial;
-    display:inline; 
-}
+    input{ 
+      max-width: 200px;
+        padding:initial;
+        display:inline; 
+    }
 
-input [type="submit"]{
-  padding: initial;
-}
+    input [type="submit"]{
+      padding: initial;
+    }
+
+
+    @media screen and (max-width: 900px){
+      #chat {
+        height: 600px;
+      }
+    }
+
+
+    @media screen and (max-width: 475px) {
+      #chat {
+        height: 550px;
+      }
+    }
+
+
 </style>
 <script type="text/javascript">
   function message(){
@@ -45,7 +60,7 @@ input [type="submit"]{
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body style="background-color:#FFFFFF">
+  <body style="background-color:#FFFFFF;">
   <!-- FB Like Button Script starts  -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -107,17 +122,29 @@ input [type="submit"]{
 		  <!--
 		  <center><img src="assets/images/todoed.png" width="300px" style="margin-top:120px;margin-bottom:30px;vertical-align:center"></center>
 		  -->
-		   <div style="margin-left:1200px; max-height:50px;max-width:50px;align:right;margin:top:100px">
-    <a href="https://angel.co/todoed" target="_blank"><img src="assets/images/angel.jpg" alt="angelList" style="border:none"></a>
-   </div>
+		  	    <div id="nave" style="max-height:50px;max-width:200px;width:80px;margin-left:80%;text-align:center;">
+      			    <ul style="padding-left:0;padding-top:5px;padding-bottom:5px;">
+                  <li style="display:inline;padding-left:0px;padding-right:5px;">  
+                    <a href="https://www.facebook.com/Todoed.co" target="_blank">
+                          <img src="facebook.jpg" style="max-width:100%;max-height:100%;">
+                    </a>
+                  </li>
+         	        <li style="display:inline;padding-left:5px;padding-right:0;">
+                    <a href="https://twitter.com/Todoed_pwl" target="_blank">
+                          <img src="twitter.jpg" style="max-width:100%;max-height:100%;">
+                    </a>
+                  </li>
+                </ul>
+            </div>
+	
 		  <center><img src="https://cloud.githubusercontent.com/assets/7721530/3646336/ab9e3326-10f2-11e4-8954-c59c5a3195f7.png" width="300px" style="margin-top:50px;margin-bottom:30px;vertical-align:center"></center>
 
-		  <center><h1 style="line-height:1.2;font-family:opensans;color:#2A3F55">Turn  <mark style="color:#ffffff;background-color:rgba(0,0,0,0.7)">any text</mark> into a task with just one right click.</h1></center>
+		  <center><h1 id="top-text" style="line-height:1.2;font-family:opensans;color:#2A3F55;font-size:32px;">Turn  <mark style="color:#ffffff;background-color:rgba(0,0,0,0.7)">any text</mark> into a task with just one right click.</h1></center>
 		   </center><br/><br/>
       
        <div align="center" class="container">
       <a href="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank"> 
-        <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png"width="150px" style="margin-top:80px;margin-bottom:30px;vertical-align:center"/>
+        <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png"width="150px" style="margin-top:60px;margin-bottom:30px;vertical-align:center"/>
       </a>
       <form style="display: inline" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
  <button type="submit" class="btn btn-default btn-info" style="display:inline;margin-left:50px;margin-top:10px; background:#5CD65C;border-radius:40px;height:50px">Download Beta!</button>
@@ -147,7 +174,7 @@ input [type="submit"]{
 	 </center>
 	 </br></br>
       <!-- Indicators -->
-      <div class="carousel-inner" style="height:700px" id="chat">
+      <div class="carousel-inner" id="chat">
 	
         <div class="item active" style="height:700px;background-image:url('assets/images/background.png');" width:100%>
 		
@@ -160,9 +187,10 @@ input [type="submit"]{
 	<!--	<center><strong><p class="colo">WHY?</p></strong></center>   
 		<h2><center style="color:#000000;margin-bottom:50px"><strong>We are on a mission to boost productivity by enabling<br/> actionable thought's to be shared with fellow<br/> coworkers in the fastest way.</strong></center></h2>-->
 	 <center>
-	 <h3><mark style="color:#ffffff;text-align:center;line-height:1.2;font-size:42px;font-family:myriadprol;background-color:rgba(0,0,0,0.5)"><em>Why to complicate things? </em></mark></h3><h3><mark style="color:#ffffff;text-align:center;line-height:1.5;font-size:42px;font-family:myriadprol;background-color:rgba(0,0,0,0.5)">
+	 <h3><mark style="color:#ffffff;text-align:center;line-height:1.2;font-size:4vmax;font-family:myriadprol;background-color:rgba(0,0,0,0.5)"><em>Why to complicate things? </em></mark></h3>
+   <h3><mark style="color:#ffffff;text-align:center;line-height:1.5;font-size:4vmax;font-family:myriadprol;background-color:rgba(0,0,0,0.5)">
 	 <em>Let’s make our life simpler.</em></mark></h3>
-	 <h3><mark style="color:#ffffff;text-align:center;line-height:1.5;font-size:42px;font-family:mayridprol;background-color:rgba(0,0,0,0.5)"><em>Convert any text while working on any platform into actionable tasks.</em></mark></h3></center><br/><br/> 
+	 <h3><mark style="color:#ffffff;text-align:center;line-height:1.5;font-size:3.5vmax;font-family:mayridprol;background-color:rgba(0,0,0,0.5)"><em>Convert any text while working on any platform into actionable tasks.</em></mark></h3></center><br/><br/> 
 	<!--<center><h3 style="color:#000000">In these chats, there are exchange of many thoughts.We wish to mark the<br/>actionable 'to do' items into their list,from within those actionable items<br/> without having to type any of that again.</h3></center>-->
 		
 		  
@@ -182,19 +210,37 @@ input [type="submit"]{
 
       <!-- Indicators -->
       
-     <div class="carousel-inner" style="height:1000px">
+     <div class="carousel-inner">
   
-        <div class="item active" style="background-color:#FFFFFF;height:1000px">
+        <div class="item active" style="background-color:#FFFFFF;">
     
         <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
           
-      <div class="container" style="margin-top:0;margin-left:-15px">
+      <div class="container" style="margin-top:0;width:100%;margin-left:auto;margin-right:auto;padding:0;">
       
-      <center><img src="https://cloud.githubusercontent.com/assets/7721530/3646583/641f6d5a-10f5-11e4-8a67-fb11b912a89e.png" ></center>
+      <center><img src="https://cloud.githubusercontent.com/assets/7721530/3646583/641f6d5a-10f5-11e4-8a67-fb11b912a89e.png" style="float:left;max-width:100%;height:auto;"></center>
      
-     <h1 style="color:#000000;line-height:1.5;font-family:myriadprol;margin-top:90px;margin-right:-80px;margin-left:300px;"> Making chats more productive and accountable</h1>
+     <div id="heading3" style="clear:both;width:90%;margin-left:auto;margin-right:auto;text-align:center;">
+       <h1 style="color:#000000;line-height:1.5;font-family:myriadprol;padding-top:50px;height:150px;vertical-align:middle;">Making chats more productive and accountable</h1>
+     </div>
      
-      <h4 style="color:#000000; text-align:left;margin-top:90px;margin-right:-80px;margin-left:100px;line-height:1.5;font-family:myriadprol;font-size:25px">Now you can mark these actionable thoughts as to do items into your or your coworkers to do lists right from within the chats. Use this fastest to do list as the first point of reference for organizing your tasks on task management tools like asana, producteev, todoist. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h4>		
+      <div id="content3">
+        <h4 
+          style="color:#000000;
+          margin-top:90px;
+          line-height:1.5;
+          font-family:myriadprol;
+          font-size:22px;
+          width:95%;
+          margin-left:auto;
+          margin-right:auto;
+          text-align:center;
+          overflow:visible;"
+        >
+           Now you can mark these actionable thoughts as to do items into your or your coworkers to do lists right from within the chats. Use this fastest to do list as the first point of reference for organizing your tasks on task management tools like asana, producteev, todoist. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.
+      </h4> 
+      </div>
+      	
 		  
         <!--    <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -207,9 +253,9 @@ input [type="submit"]{
        
 	   
       <!-- Indicators -->
-      <div class="carousel-inner" style="height:1400px">
+      <div class="carousel-inner">
 	
-        <div class="item active" style="background-color:#ffffff;height:1400px">
+        <div class="item active" style="background-color:#ffffff;">
 		
         <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
         
@@ -217,172 +263,108 @@ input [type="submit"]{
 		 <!--<center><h2 style="margin-top:100px;color:#000000;font-family:myriadprol;line-height:1.4em">Now use this fastest to do list as the first point of reference for organising your tasks on task management tools like asana, producteev, todoist etc. if you use these tools. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h2>
 		</center>-->
 <!--subsriptionform-->
-<h1 style="color:#000000;line-height:1.5;font-family:myriadprol;margin-top:50px;margin-right:-80px;margin-left:200px;">Subscribe to our newsletters and updates!</h1>
+<h1 style="color:#000000;line-height:1.5;font-family:myriadprol;width:85%;text-align:center;margin:40px auto 10px auto;font-size:4vmax;">Subscribe to our newsletters and updates!</h1>
 
 <!--subsriptionform-->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 
-<div id="mc_embed_signup">
+<div id="mc_embed_signup" style="
+          width:85%;
+          margin: 0 auto 0 auto;
+          text-align:right;
+          line-height:0%;
+          align:center">
 <form action="http://preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=6d36c66925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 <form class="form-inline" role="form" >
-  <div class="input-group col-xs-4" style="margin-left:33%;margin-right:0; display:inline; float:left">
+  <div class="input-group col-xs-4">
   
- <input type="email" value=""class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline;float:left">
-     <button type="submit" class="btn btn-default btn-info" style="display:inline;margin-left:285px;margin-top:-55px" onclick="message ()">Send Invite</button>
+ <input type="email" value=""class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline;">
+     <button type="submit" class="btn btn-default btn-info"  onclick="message()">Send Invite</button>
   </div>
 </form>
 
 <!--End mc_embed_signup-->
 <div id="msg" style="display:none">
-<h5 style="font-family:arial;color:#00CC66;margin-left:300px">To complete the subscription process, please click the link in the email we just sent you.</h5>
+<br><h5 style="font-family:arial;color:#00CC66;margin-left:20px;">To complete the subscription process, please click the link in the email we just sent you.</h5>
 </div>
 <br/><br/>
-<!--<form style="display: inline" action="http://eepurl.com/XDssX" target="_blank" method="get" >
- <button type="submit" class="btn btn-default btn-info" style="display:inline;margin-left:450px;margin-top:-10px">Subscribe</button>
-</form>
-<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">-->
 
-<div id="last" >
-<!--<form action="http://preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=6d36c66925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-
-<form class="form-inline" role="form" >
-  <div class="input-group col-xs-4" style="margin-left:33%;margin-right:0; display:inline; float:left">
-  
-   <input type="email" class="form-control" value="" name="b_6d760d307e7d9e29e2344532b_6d36c66925" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline;float:left">
-     <button type="submit" class="btn btn-default btn-info" style="display:inline;" id="mc-embedded-subscribe" value="Subscribe" name="subscribe">Subscribe</button>
-  </div>
-</form>-->
-
-
-<!--  <div class="mc-field-group">
-  
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Please Enter your Email-Id">
-</div>
-  <div id="mce-responses" class="clear">
-    <div class="response" id="mce-error-response" style="display:none"></div>
-    <div class="response" id="mce-success-response" style="display:none"></div>
-  </div>    
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_6d760d307e7d9e29e2344532b_6d36c66925" value=""></div>
-  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>-->
-</div>
-
-
-<!--subscriptionformends-->
-		
-		  
-        <!--    <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div> -->
           </div>
           <br/><br>
 
       <center>    
-		<div style="margin-left:-150px">
+		<div style="
+    width: 90%;
+    max-width:800px;
+    margin: 10px auto;
+    ">
     <blockquote class="twitter-tweet" lang="en" >
 		 <p><a href="https://twitter.com/todoed_pwl" target="_blank" style="margin-left:-500px">@todoed_pwl</a> Yeah, it works seamlessly! Amazing! Keep up the good work. :)</p>&mdash; Sahil Dua (@sahildua2305) <a href="https://twitter.com/sahildua2305/statuses/486617148656066560">July 8, 2014</a>
 		</blockquote>
   </div>
 		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-	  <a href="https://twitter.com/todoed_pwl" target="_blank" style="text-align:center;margin-left:-120px">
+	  <a href="https://twitter.com/todoed_pwl" target="_blank" style="text-align:center;">
 	  <!---Twitter starts -->
 	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://weblab.preseed.in/projects/todoed/" data-text="@todoed_pwl is a fundamentally different todo listing app by @thepreseed . Check it out." data-hashtags="tasklist">Tweet</a>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <br>
 	<a href="https://twitter.com/Todoed_pwl" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Todoed_pwl</a>
-<!---Twitter ends -->
+<!---Twitter ends --> 
 	  </a>
     <br>
     <br>
     <br>
    <hr size=4 width="50%">
     <div style="margin-top:25px">
-     <img src="assets/images/asd.png" alt="the startup pitch" style="padding:50px">
-     <img src="assets/images/crunch_base.png" alt="crunch base" style="padding:50px">
-     <img src="assets/images/launching_next.png" alt="launching next" style="padding:50px">
-     <img src="assets/images/launch_list.png" alt="launch list" style="padding:50px">
+     <img src="assets/images/asd.png" alt="the startup pitch" style="padding:20px">
+     <img src="assets/images/crunch_base.png" alt="crunch base" style="padding:20px">
+     <img src="assets/images/launching_next.png" alt="launching next" style="padding:20px">
+     <img src="assets/images/launch_list.png" alt="launch list" style="padding:20px">
     </div>
     <hr  size=4 width="50%">
 	
-	<div class="container" style="padding-top:60px">
-   <center>
-   	<a href="https://medium.com/preseed-web-lab/dd71f9ec0a01" style="text-decoration:none" target="_blank"><font size="55px" style="font-family:myriadprol;padding-right:5px;padding-left:10px">How <strong>Todoed</strong> came about?</font></a></center><br/><br/>
-	<a href="https://todoed.freshdesk.com/support/discussions"style="font-size:30px;margin-top=-200px;font-family:myriadprol;color:#5CD65C" target="_blank">Feedback!</a>
-    	<h4 style="font-family:myriadprol">a <a href="http://weblab.preseed.in" target="_blank" style="color:#9ACBD9;font-family:myriadprol">Preseed Web Lab</a> project.<br/><small >Preseed &copy; 2014</small></h3>
-   </center>
-<!-- FB Like Starts-->
-<div align="center">
-<div class="fb-like" data-href="https://www.facebook.com/Todoed.co" data-width="200" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
-</div>
-	<!-- FB Like Ends-->    
-   </br>
+  <div id="bottom-section">
+
+   <div id="angellist" style="display:block;width:100%;"> 
+        <div id="hand" style=" width:80px;margin:0 auto;padding-bottom:10px;display:block;" >
+          <a href="https://angel.co/todoed" target="_blank">
+            <img src="assets/images/angel.jpg" alt="angelList" />
+          </a>
+        </div>
+        <div id="angellist-text">
+          <h4 style="width:80%;margin:0 auto;">
+            Meet our team on AngelList
+          </h4>
+        </div>  
    </div>
-    </div><!-- /.carousel-inner -->
-    <!--
-	<div class="carousel-inner" style="height:790px">
-	
-        <div class="item active" style="background-image:url('assets/images/mountain.png');height:790px">
-		
-         <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
-          
-		  <div class="container" style="padding-top:180px">
-		   <center><font size="6px" style="color:#FFFFFF;background-color:rgba(49,67,83,0.5);font-family:myriadpror;padding-right:10px;padding-left:10px">We are on a mission to make chats among co workers more productive and accountable.</font></center>
-	<br/><br/><br/><br/>	
-   <center><a href="https://medium.com/preseed-web-lab/dd71f9ec0a01" style="text-decoration:none" target="_blank"><font size="76px" style="color:#FFFFFF;background-color:rgba(89,209,171,0.5);font-family:myriadpror;padding-right:5px;padding-left:10px">How <strong>Todo</strong>ed came about?</font></a></center><br/><br/><br/><br/><br/><br/><br/><br/>
-		
-		<center><h4 style="color:#ffffff;font-family:myriadprol">a <a href="http://weblab.preseed.in" target="_blank" style="color:#9ACBD9">Preseed Web Lab</a> project.<br/><small style="color:#ffffff">Preseed &copy; 2014</small></h3></center>
-		  
-       -->
-          </div>
-        </div>
-       
-      
-    </div><!-- /.carousel-inner -->
-<!--
-<div class="carousel-inner" style="height:200px">
-	
-        <div class="item active" style="color:#FFFFFF;height:200px">
-		
-        
-          
-		  <div class="container" style="padding-top:50px">
-		  
-		 <center><h2 style="color:#000000;font-family:myriadprol">a<a href="http://weblab.preseed.in" target="_blank"> Preseed Web Lab</a> project.</h2></center>
-		
-		
-		  
-          </div>
-        </div>
-       
-      
-    </div>--><!-- /.carousel-inner -->
-
-       
-       
-      
-    <!-->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
    
-   <!--   <hr class="featurette-divider"> -->
+   <div id="todoed-story">
+     <a href="https://medium.com/preseed-web-lab/dd71f9ec0a01" style="text-decoration:none" target="_blank"><font size="55px" style="font-family:myriadprol;padding-right:5px;padding-left:10px">How <strong>Todoed</strong> came about?</font></a>
+   </div>
+    
+    <br/><br/>
 
-      <!-- /END THE FEATURETTES -->
+    <div id="feedback">
+      <a href="https://todoed.freshdesk.com/support/discussions"style="font-size:30px;margin-top=-200px;font-family:myriadprol;color:#5CD65C" target="_blank">Feedback!</a>
+    </div>
+  
+    <div id="footer">
+      <h4 style="font-family:myriadprol">a <a href="http://weblab.preseed.in" target="_blank" style="color:#9ACBD9;font-family:myriadprol">Preseed Web Lab</a> project.<br/><small >Preseed &copy; 2014</small>
+      </h4>
 
+    </div>
 
-      <!-- FOOTER -->
- <!--     <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
--->
-    </div><!-- /.container -->
+          
+   </br>
+   </div>
+    
+	
 	
 
 
