@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Todoed</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.keyframes.min.js"></script>
+
+<style type="text/css">
+    input{ 
+      max-width: 200px;
+        padding:initial;
+        display:inline; 
+    }
+
+    input [type="submit"]{
+      padding: initial;
+    }
+    
+    #top-text span {
+      display:inline-block;
+      height:46px;
+      line-height:40px;
+    }
+
+    #links a {
+      display: inline-block;
+      -webkit-transition: all;
+      -o-transition: all;
+      transition: all;
+      border:none;
+      -webkit-transition-duration: 300ms;
+      -o-transition-duration: 300ms;
+      transition-duration: 300ms;
+    }
+
+    #links a:hover{
+      opacity: .6;
+    }
+
+</style>
+
+<script type="text/javascript">
+  function message(){
+    div = document.getElementById('msg');
+    div.style.display = "block";
+  }
+
+  function resize()
+  {
+    var x = window.innerWidth;
+    var y = 0.04 * x;
+    var z = 0.035 * x;
+    if (750 <= x <= 1366)
+    {
+      document.getElementById('subs-head').style.fontSize=y+'px';
+      document.getElementById('h11').style.fontSize=y+'px';
+      document.getElementById('h22').style.fontSize=y+'px';
+      document.getElementById('h33').style.fontSize=z+'px'; 
+    }
+    if (x > 1366) 
+    {
+      document.getElementById('subs-head').style.fontSize='60px';
+      document.getElementById('h11').style.fontSize='60px';
+      document.getElementById('h22').style.fontSize='60px';
+      document.getElementById('h33').style.fontSize='54px';
+    }
+    if (x < 750)
+    {
+      document.getElementById('subs-head').style.fontSize='32px';
+      document.getElementById('h11').style.fontSize=y+'px';
+      document.getElementById('h22').style.fontSize=y+'px';
+      document.getElementById('h33').style.fontSize=z+'px';
+    }
+  }
+
+</script>
+    <!-- Custom styles for this template -->
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body style="background-color:#FFFFFF;padding-bottom:0;padding-top:10px;" onload="resize()">
+  <!-- FB Like Button Script starts  -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:600px;display:block;">
+      <!-- Indicators -->
+      <div class="carousel-inner" style="height:600px;">
+        <div class="item active" style="background-color:#FFFFFF" style=";">
+        <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+          
+		  <!--
+		  <center><img src="assets/images/todoed.png" width="300px" style="margin-top:120px;margin-bottom:30px;vertical-align:center"></center>
+		  -->
+		  	    <div id="nave" style="max-height:50px;width:100%;text-align:right;padding:20px 10px 20px 0;">
+      			    <ul style="padding-left:0;padding-top:5px;padding-bottom:5px;">
+                  <li style="display:inline;padding-left:0px;padding-right:5px;">  
+                    <a href="https://www.facebook.com/Todoed.co" target="_blank">
+                          <img id="f" src="facebook.jpg" style="max-width:100%;max-height:100%;">
+                    </a>
+                  </li>
+         	        <li style="display:inline;padding-left:5px;padding-right:0;">
+                    <a href="https://twitter.com/Todoed_pwl" target="_blank">
+                          <img id="t" src="twitter.jpg" style="">
+                    </a>
+                  </li>
+                </ul>
+            </div>
+	
+		  <center ><img src="https://cloud.githubusercontent.com/assets/7721530/3646336/ab9e3326-10f2-11e4-8954-c59c5a3195f7.png" style="clear:right;width:21.961933%;min-width:200px;max-width:300px;margin-top:50px;margin-bottom:30px;display:inline-block;"></center>
+
+		  <center><h1 id="top-text" style="line-height:1.2;font-family:opensans;color:#2A3F55;font-size:32px;display:inline-block;">Turn <span id="text1">any text</span> into a task with just one right click.</h1></center>
+		   </center><br/><br/>
+      
+      <script type="text/javascript">
+
+          $(document).ready(function() {
+              $("#text1").lettering();
+          });
+
+          $(document).ready(function(){
+            $('#text1').css({'display':'inline-block','height':'40px','line-height':'32px'});
+          });
+
+      </script>
+
+      <div class="junk">
+        <style type="text/css" scoped>
+
+            .char1 {
+              padding-left: 10px;
+            }
+            .char8 {
+              padding-right: 10px;
+            }
+            .char4 {
+              display: inline-block;
+              width: 15px;
+            }
+
+            /*first-char*/
+            @-webkit-keyframes t1 {
+              0% {background: #FFFFFF;}
+              12.5%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t1 {
+              0% {background: #FFFFFF;}
+              12.5%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t1 {
+              0% {background: #FFFFFF;}
+              12.5%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t1 {
+              0% {background: #FFFFFF;}
+              12.5%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char1 {-webkit-animation: t1 2s infinite;
+            -o-animation: t1 2s infinite;
+            animation: t1 2s infinite;
+            -webkit-animation-delay: 0;
+            -o-animation-delay: 0;
+            animation-delay: 0;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+            
+            /*second-char*/
+            @-webkit-keyframes t2 {
+              0% {background: #FFFFFF;}
+              14.2857142%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t2 {
+              0% {background: #FFFFFF;}
+              14.2857142%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t2 {
+              0% {background: #FFFFFF;}
+              14.2857142%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t2 {
+              0% {background: #FFFFFF;}
+              14.2857142%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char2 {-webkit-animation: t2 1750ms infinite;
+            -o-animation: t2 1750ms infinite;
+            animation: t2 1750ms infinite;
+            -webkit-animation-delay: 250ms;
+            -o-animation-delay: 250ms;
+            animation-delay: 250ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+           /*third char*/
+           @-webkit-keyframes t3 {
+              0% {background: #FFFFFF;}
+              16.66666666666%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t3 {
+              0% {background: #FFFFFF;}
+              16.66666666666%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t3 {
+              0% {background: #FFFFFF;}
+              16.66666666666%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t3 {
+              0% {background: #FFFFFF;}
+              16.66666666666%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char3 {-webkit-animation: t3 1500ms infinite;
+            -o-animation: t3 1500ms infinite;
+            animation: t3 1500ms infinite;
+            -webkit-animation-delay: 500ms;
+            -o-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+            /*fourth-char*/
+            @-webkit-keyframes t4 {
+              0% {background: #FFFFFF;}
+              20%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t4 {
+              0% {background: #FFFFFF;}
+              20%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t4 {
+              0% {background: #FFFFFF;}
+              20%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t4 {
+              0% {background: #FFFFFF;}
+              20%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char4 {-webkit-animation: t4 1250ms infinite;
+            -o-animation: t4 1250ms infinite;
+            animation: t4 1250ms infinite;
+            -webkit-animation-delay: 750ms;
+            -o-animation-delay: 750ms;
+            animation-delay: 750ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+            /*5th char*/
+            @-webkit-keyframes t5 {
+              0% {background: #FFFFFF;}
+              25%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t5 {
+              0% {background: #FFFFFF;}
+              25%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t5 {
+              0% {background: #FFFFFF;}
+              25%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t5 {
+              0% {background: #FFFFFF;}
+              25%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char5 {-webkit-animation: t5 1000ms infinite;
+            -o-animation: t5 1000ms infinite;
+            animation: t5 1000ms infinite;
+            -webkit-animation-delay: 1000ms;
+            -o-animation-delay: 1000ms;
+            animation-delay: 1000ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+            /*sixth char*/
+            @-webkit-keyframes t6 {
+              0% {background: #FFFFFF;}
+              33.3333333333%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t6 {
+              0% {background: #FFFFFF;}
+              33.3333333333%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t6 {
+              0% {background: #FFFFFF;}
+              33.3333333333%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t6 {
+              0% {background: #FFFFFF;}
+              33.3333333333%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char6 {-webkit-animation: t6 750ms infinite;
+            -o-animation: t6 750ms infinite;
+            animation: t6 750ms infinite;
+            -webkit-animation-delay: 1250ms;
+            -o-animation-delay: 1250ms;
+            animation-delay: 1250ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+            /*seventh char*/
+            @-webkit-keyframes t7 {
+              0% {background: #FFFFFF;}
+              50%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t7 {
+              0% {background: #FFFFFF;}
+              50%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t7 {
+              0% {background: #FFFFFF;}
+              50%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t7 {
+              0% {background: #FFFFFF;}
+              50%{background: #3297FD;color:#ffffff;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char7 {-webkit-animation: t7 500ms infinite;
+            -o-animation: t7 500ms infinite;
+            animation: t7 500ms infinite;
+            -webkit-animation-delay: 1500ms;
+            -o-animation-delay: 1500ms;
+            animation-delay: 1500ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+            /*eighth char*/
+            @-webkit-keyframes t8 {
+              0% {background: #FFFFFF;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-o-keyframes t8 {
+              0% {background: #FFFFFF;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @-moz-keyframes t8 {
+              0% {background: #FFFFFF;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            @keyframes t8 {
+              0% {background: #FFFFFF;}
+              100% {background: #3297FD;color:#ffffff;}
+            }
+            .char8 {-webkit-animation: t8 250ms infinite;
+            -o-animation: t8 250ms infinite;
+            animation: t8 250ms infinite;
+            -webkit-animation-delay: 1750ms;
+            -o-animation-delay: 1750ms;
+            animation-delay: 1750ms;
+            -webkit-animation-fill-mode: backwards;
+            -o-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;}
+
+
+        </style>
+
+        <script type="text/javascript">
+
+          setInterval(function() {
+              // console.log("asd");
+              $("#text1").html($("#text1").html());
+          }, 2000);
+
+
+        </script>
+
+      </div>
+      
+       <div align="center" class="container" style="display:block;margin-top:-50px;">
+      <a href="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank"> 
+        <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png" style="margin-top:60px;margin-bottom:30px;vertical-align:center;max-width:150px;height:auto;"/>
+      </a>
+      <form style="display: inline" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
+        <button type="submit" class="btn btn-default btn-info" style="display:inline-block;margin-left:50px;margin-top:10px; background:#5CD65C;border-radius:40px;height:50px">
+             Download Beta!
+        </button>
+      </form>
+      
+          </div>
+		  
+          </div>
+        </div>
+    </div><!-- /.carousel-inner -->	
+	 <center>
+	 <a href="#chat" style="display:block;margin-top:-80px;"> <img style="opacity:0.5;" src="assets/images/arrowdown.png"/></a>
+
+	 </center>
+	 </br>
+      <!-- Indicators -->
+      <div class="carousel-inner" id="chat">
+	
+        <div class="item active" style="background-image:url('assets/images/Elegant_Background-8.jpg');background-repeat:repeat;width:100%;display:block;height:auto;" >
+		
+        <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+		</br></br>
+    <center>
+          <div id="tagline" style="display:block;color:#ffffff;padding:2px 0;width:100%;text-align:center;text-shadow:0 0 3px #ffffff;font-size:16px;">
+            <span>It will only take a minute to watch it</span>
+          </div>
+            <iframe frameborder="0" width="420" height="315" src="https://www.youtube.com/embed/7v6oAe1lwdQ"></iframe>
+		  </center>
+		  
+	
+	 <center>
+	 <h3 id="h11" style="color:#ffffff;text-shadow:0 0 2px white;text-align:center;line-height:1.2;font-size:54px;font-family:myriadprol;"><em>Why to complicate things?</em></h3>
+   <h3 id="h22" style="color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:54px;font-family:myriadprol;margin-top:10px;">
+	 <em>Let’s make our life simpler.</em></h3>
+	 <h3 id="h33" style="display:block;color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:48px;font-family:mayridprol;padding:5px 5px 10px 5px;margin-top:10px;"><em>Convert any text while working on any platform into actionable tasks.</em></h3></center> 
+	
+          
+        </div>
+       
+       
+      
+    </div><!-- /.carousel-inner -->
+	
+	
+
+      <!-- Indicators -->
+      
+     <div class="carousel-inner">
+  
+        <div class="item active" style="background-color:#FFFFFF;">
+    
+        <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+          
+      <div class="container" style="margin-top:0;width:100%;margin-left:auto;margin-right:auto;padding:0;">
+      
+      <center><img src="assets/images/Front View.png" style="max-width:100%;height:auto;display:block;padding-top:20px;"></center>
+     
+     <div id="heading3" style="clear:both;width:90%;margin-left:auto;margin-right:auto;text-align:center;">
+       <h1 style="color:#000000;line-height:1.5;font-family:myriadprol;padding-top:50px;height:150px;vertical-align:middle;">Making chats more productive and accountable</h1>
+     </div>
+     
+      <div id="content3">
+        <h4 
+          style="color:#000000;
+          margin-top:90px;
+          line-height:1.5;
+          font-family:myriadprol;
+          font-size:22px;
+          width:95%;
+          margin-left:auto;
+          margin-right:auto;
+          text-align:center;
+          overflow:visible;"
+        >
+           Now you can mark these actionable thoughts as to do items into your or your coworkers to do lists right from within the chats. Use this fastest to do list as the first point of reference for organizing your tasks on task management tools like asana, producteev, todoist. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.
+      </h4> 
+      </div>
+      	
+		  
+      
+          </div>
+        </div>
+       </div>
+       
+	   
+      <!-- Indicators -->
+      <div class="carousel-inner">
+	
+        <div class="item active" style="background-color:#ffffff;">
+		
+        <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+        
+		  <div class="container" >
+		 <!--<center><h2 style="margin-top:100px;color:#000000;font-family:myriadprol;line-height:1.4em">Now use this fastest to do list as the first point of reference for organising your tasks on task management tools like asana, producteev, todoist etc. if you use these tools. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h2>
+		</center>-->
+<!--subsriptionform-->
+<h1 id="subs-head" style="color:#000000;line-height:1.5;font-family:myriadprol;width:85%;text-align:center;margin:40px auto 10px auto;font-size:54px;padding-bottom:10px;" >Subscribe to our newsletters and updates!</h1>
+
+
+<div id="mc_embed_signup" style="
+          width:100%;
+          margin: 0 auto 0 auto;
+          text-align:center;
+          line-height:0%;">
+<form action="http://preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=6d36c66925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="text-align:center;" novalidate>
+
+<form class="form-inline" role="form" >
+  <div class="input-group col-xs-4">
+  
+ <input type="email" value=""class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline-block;">
+     <button type="submit" class="btn btn-default btn-info" style="display:inline-block;" onclick="message()">Send Invite</button>
+  </div>
+</form>
+
+<!--End mc_embed_signup-->
+<div id="msg" style="display:none">
+<br><h5 style="font-family:arial;color:#00CC66;margin-left:20px;">To complete the subscription process, please click the link in the email we just sent you.</h5>
+</div>
+<br/><br/>
+
+          </div>
+          <br/><br>
+
+      <center>    
+		<div style="
+    width: 90%;
+    max-width:800px;
+    margin: 10px auto;
+    ">
+    <blockquote class="twitter-tweet" lang="en" >
+		 <p><a href="https://twitter.com/todoed_pwl" target="_blank" style="margin-left:-500px">@todoed_pwl</a> Yeah, it works seamlessly! Amazing! Keep up the good work. :)</p>&mdash; Sahil Dua (@sahildua2305) <a href="https://twitter.com/sahildua2305/statuses/486617148656066560">July 8, 2014</a>
+		</blockquote>
+  </div>
+		<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	  <a href="https://twitter.com/todoed_pwl" target="_blank" style="display:inline-block;">
+	  <!---Twitter starts -->
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://weblab.preseed.in/projects/todoed/" data-text="@todoed_pwl is a fundamentally different todo listing app by @thepreseed . Check it out." data-hashtags="tasklist" style="display:inline-block;">Tweet</a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <br>
+	<a href="https://twitter.com/Todoed_pwl" class="twitter-follow-button" data-show-count="false" data-size="large" style="display:inline-block;">Follow @Todoed_pwl</a>
+<!---Twitter ends --> 
+	  </a>
+    <br>
+    <br>
+    <br>
+   <hr size=4 width="50%">
+    <div style="margin-top:25px" id="links">
+      <a href="http://thestartuppitch.com/pitches/pitch-for-todoed/" target="_blank">
+          <img src="assets/images/asd.png" alt="the startup pitch" style="padding:20px">
+      </a>
+      <a href="http://www.crunchbase.com/product/todoed-2" target="_blank">
+          <img src="assets/images/crunch_base.png" alt="crunch base" style="padding:20px">
+      </a>
+      <a href="http://www.launchingnext.com/s/todoed/7606/" target="_blank">
+          <img src="assets/images/launching_next.png" alt="launching next" style="padding:20px">
+      </a>
+      <a href="http://launchlist.co/item/todoed" target="_blank">
+          <img src="assets/images/launch_list.png" alt="launch list" style="padding:20px">
+      </a>
+    </div>
+    <hr  size=4 width="50%">
+	
+  <div id="bottom-section">
+
+   <div id="angellist" style="display:block;width:100%;"> 
+        <div id="hand" style=" width:80px;margin:0 auto;padding-bottom:10px;display:block;" >
+          <a href="https://angel.co/todoed" target="_blank">
+            <img src="assets/images/angel.jpg" alt="angelList" />
+          </a>
+        </div>
+        <div id="angellist-text">
+          <h4 style="width:80%;margin:0 auto;">
+            Meet our team on AngelList
+          </h4>
+        </div>  
+   </div>
+
+   
+   <div id="todoed-story">
+     <a href="https://medium.com/preseed-web-lab/dd71f9ec0a01" style="text-decoration:none;width:400px;" target="_blank"><font size="55px" style="font-family:myriadprol;font-size:32px;padding-top:40px;display:block;width:400px;">Story behind <strong>Todoed</strong> </font></a>
+   </div>
+    
+    <br/><br/>
+
+    <div id="feedback">
+      <!-- <a href="https://todoed.freshdesk.com/support/discussions"style="font-size:30px;margin-top=-200px;font-family:myriadprol;color:#5CD65C" target="_blank">Feedback!</a> -->
+      
+      <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+      <script type="text/javascript">
+          FreshWidget.init("", {"queryString": "&widgetType=popup", "widgetType": "popup", "buttonType": "text", "buttonText": "Feedback", "buttonColor": "white", "buttonBg": "#00CBBA", "alignment": "4", "offset": "400px", "formHeight": "500px", "url": "https://todoed.freshdesk.com"} );
+      </script>
+
+    </div>
+      
+
+    <form style="display: inline" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
+        <button type="submit" class="btn btn-default btn-info" style="display:block;margin-top:10px;margin-bottom:30px; background:#5CD65C;border-radius:40px;height:50px">
+             Download Beta!
+        </button>
+      </form>
+
+    <div id="footer">
+      <h4 style="font-family:myriadprol">a <a href="http://weblab.preseed.in" target="_blank" style="color:#9ACBD9;font-family:myriadprol">Preseed Web Lab</a> project.<br/><small >Preseed &copy; 2014</small>
+      </h4>
+
+    </div>
+
+
+          
+   </br>
+   </div>
+    
+	
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.lettering.js"></script>
+    <!--mailchimpjs-->
+    <!-- Begin MailChimp Signup Form -->
+
+<script type="text/javascript">
+var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+try {
+    var jqueryLoaded=jQuery;
+    jqueryLoaded=true;
+} catch(err) {
+    var jqueryLoaded=false;
+}
+var head= document.getElementsByTagName('head')[0];
+if (!jqueryLoaded) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    head.appendChild(script);
+    if (script.readyState && script.onload!==null){
+        script.onreadystatechange= function () {
+              if (this.readyState == 'complete') mce_preload_check();
+        }    
+    }
+}
+
+var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+}
+var head= document.getElementsByTagName('head')[0];
+var style= document.createElement('style');
+style.type= 'text/css';
+if (style.styleSheet) {
+  style.styleSheet.cssText = err_style;
+} else {
+  style.appendChild(document.createTextNode(err_style));
+}
+head.appendChild(style);
+setTimeout('mce_preload_check();', 250);
+
+var mce_preload_checks = 0;
+function mce_preload_check(){
+    if (mce_preload_checks>40) return;
+    mce_preload_checks++;
+    try {
+        var jqueryLoaded=jQuery;
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+    head.appendChild(script);
+    try {
+        var validatorLoaded=jQuery("#fake-form").validate({});
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    mce_init_form();
+}
+function mce_init_form(){
+    jQuery(document).ready( function($) {
+      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+      options = { url: 'http://preseed.us3.list-manage.com/subscribe/post-json?u=6d760d307e7d9e29e2344532b&id=6d36c66925&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                    beforeSubmit: function(){
+                        $('#mce_tmp_error_msg').remove();
+                        $('.datefield','#mc_embed_signup').each(
+                            function(){
+                                var txt = 'filled';
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        var bday = false;
+                                        if (fields.length == 2){
+                                            bday = true;
+                                            fields[2] = {'value':1970};//trick birthdays into having years
+                                        }
+                                      if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                        this.value = '';
+                      } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                        this.value = '';
+                      } else {
+                          if (/\[day\]/.test(fields[0].name)){
+                                              this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                         
+                          } else {
+                                              this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                                          }
+                                      }
+                                    });
+                            });
+                        $('.phonefield-us','#mc_embed_signup').each(
+                            function(){
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                                        this.value = '';
+                      } else {
+                          this.value = 'filled';
+                                      }
+                                    });
+                            });
+                        return mce_validator.form();
+                    }, 
+                    success: mce_success_cb
+                };
+      $('#mc-embedded-subscribe-form').ajaxForm(options);
+      
+      
+    });
+}
+function mce_success_cb(resp){
+    $('#mce-success-response').hide();
+    $('#mce-error-response').hide();
+    if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+      });
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(msg);            
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                
+                var input_id = '#mc_embed_signup';
+                var f = $(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = $(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = $(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = $().parent(input_id).get(0);
+                }
+                if (f){
+                    $(f).append(html);
+                    $(input_id).focus();
+                } else {
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+
+</script>
+<!--End mc_embed_signup-->
+    <!--mailchimpjsends-->
+  </body>
+</html>
