@@ -11,13 +11,14 @@
     <title>Todoed</title>
 
     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="dist/css/bootstrap.css" rel="stylesheet">
     <link href="carousel.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.keyframes.min.js"></script>
+    <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
 
 <style type="text/css">
     input{ 
@@ -50,7 +51,88 @@
     #links a:hover{
       opacity: .6;
     }
+    
+    #f{
+        opacity: 1;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #f:hover{
+      opacity: .5;
+      text
+    }
+    #t{
+      opacity: 1;
+      -webkit-transition: all 200ms;
+      -o-transition: all 200ms;
+      transition: all 200ms;
+    }
+    #t:hover{
+      opacity: .5;
+    }
 
+    #arr{
+      opacity: .7;
+      -webkit-transition: all 200ms;
+      -o-transition: all 200ms;
+      transition: all 200ms;     
+     }
+     #arr:hover{
+      opacity: .5;
+     }
+
+     #arrow img{
+      position: relative;
+      -webkit-animation: arr 2s infinite;
+      -o-animation: arr 2s infinite;
+      animation: arr 2s infinite;
+      -webkit-animation-timing-function: ease;
+      -o-animation-timing-function: ease;
+      animation-timing-function: ease;
+     }
+
+     @-webkit-keyframes arr {
+       0%{ top: -40px; }
+       50% { top: 0;}
+       100% { top: -40px; }
+     }
+     @-o-keyframes arr {
+       0%{ top: -40px; }
+       50% { top: 0;}
+       100% { top: -40px; }
+     }
+     @-moz-keyframes arr {
+       0%{ top: -40px; }
+       50% { top: 0;}
+       100% { top: -40px; }
+     }
+     @keyframes arr {
+       0%{ top: -40px; }
+       50% { top: 0;}
+       100% { top: -40px; }
+     }
+      
+      #div2 {
+        border-radius: 40px;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+      }
+      #div2:hover {
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+      }
+
+      #again button{
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+      }
+      #again button:hover {
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+      }
 </style>
 
 <script type="text/javascript">
@@ -63,27 +145,20 @@
   {
     var x = window.innerWidth;
     var y = 0.04 * x;
-    var z = 0.035 * x;
-    if (750 <= x <= 1366)
+    if (750 <= x <= 1500)
     {
-      document.getElementById('subs-head').style.fontSize=y+'px';
-      document.getElementById('h11').style.fontSize=y+'px';
+      document.getElementById('subs-head').style.fontSize=y+'px'; 
       document.getElementById('h22').style.fontSize=y+'px';
-      document.getElementById('h33').style.fontSize=z+'px'; 
     }
-    if (x > 1366) 
+    if (x > 1500) 
     {
       document.getElementById('subs-head').style.fontSize='60px';
-      document.getElementById('h11').style.fontSize='60px';
       document.getElementById('h22').style.fontSize='60px';
-      document.getElementById('h33').style.fontSize='54px';
     }
     if (x < 750)
     {
       document.getElementById('subs-head').style.fontSize='32px';
-      document.getElementById('h11').style.fontSize=y+'px';
-      document.getElementById('h22').style.fontSize=y+'px';
-      document.getElementById('h33').style.fontSize=z+'px';
+      document.getElementById('h22').style.fontSize='28px';
     }
   }
 
@@ -93,6 +168,7 @@
 <!-- NAVBAR
 ================================================== -->
   <body style="background-color:#FFFFFF;padding-bottom:0;padding-top:10px;" onload="resize()">
+
   <!-- FB Like Button Script starts  -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -105,360 +181,102 @@
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:600px;display:block;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:auto;display:block;margin-bottom:0;">
       <!-- Indicators -->
-      <div class="carousel-inner" style="height:600px;">
-        <div class="item active" style="background-color:#FFFFFF" style=";">
+      <div class="carousel-inner" style="height:auto;">
+        <div class="item active" style="background-color:#FFFFFF;height:auto;">
         <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
           
 		  <!--
 		  <center><img src="assets/images/todoed.png" width="300px" style="margin-top:120px;margin-bottom:30px;vertical-align:center"></center>
 		  -->
-		  	    <div id="nave" style="max-height:50px;width:100%;text-align:right;padding:20px 10px 20px 0;">
-      			    <ul style="padding-left:0;padding-top:5px;padding-bottom:5px;">
-                  <li style="display:inline;padding-left:0px;padding-right:5px;">  
+		  	    <div id="nave" style="max-height:50px;width:100%;text-align:right;padding:20px 25px 5px 0;display:block;margin-bottom:20px;">
+      			    <ul style="padding-top:5px;padding-bottom:5px;">
+                  <li style="display:inline-block;padding-right:10px;">  
                     <a href="https://www.facebook.com/Todoed.co" target="_blank">
-                          <img id="f" src="facebook.jpg" style="max-width:100%;max-height:100%;">
+                          <img id="f" src="facebook.jpg" style="max-width:80%;max-height:80%;">
                     </a>
                   </li>
-         	        <li style="display:inline;padding-left:5px;padding-right:0;">
+         	        <li style="display:inline-block;padding-left:10px;">
                     <a href="https://twitter.com/Todoed_pwl" target="_blank">
-                          <img id="t" src="twitter.jpg" style="">
+                          <img id="t" src="twitter.jpg" style="max-width:80%;max-height:80%;">
                     </a>
                   </li>
                 </ul>
             </div>
-	
-		  <center ><img src="https://cloud.githubusercontent.com/assets/7721530/3646336/ab9e3326-10f2-11e4-8954-c59c5a3195f7.png" style="clear:right;width:21.961933%;min-width:200px;max-width:300px;margin-top:50px;margin-bottom:30px;display:inline-block;"></center>
+	          <div> 
+            </div>
+		  <center ><img src="https://cloud.githubusercontent.com/assets/7721530/3646336/ab9e3326-10f2-11e4-8954-c59c5a3195f7.png" style="clear:right;width:21.961933%;min-width:200px;max-width:300px;margin-top:0px;margin-bottom:40px;display:inline-block;"></center>
 
-		  <center><h1 id="top-text" style="line-height:1.2;font-family:opensans;color:#2A3F55;font-size:32px;display:inline-block;">Turn <span id="text1">any text</span> into a task with just one right click.</h1></center>
+		  <center><h1 id="top-text" style="line-height:1.2;font-family:opensans;color:#2A3F55;font-size:32px;display:inline-block;margin-bottom:20px;">Turn any text into a task with just one right click.</h1></center>
 		   </center><br/><br/>
       
-      <script type="text/javascript">
-
-          $(document).ready(function() {
-              $("#text1").lettering();
-          });
-
-          $(document).ready(function(){
-            $('#text1').css({'display':'inline-block','height':'40px','line-height':'32px'});
-          });
-
-      </script>
-
-      <div class="junk">
-        <style type="text/css" scoped>
-
-            .char1 {
-              padding-left: 10px;
-            }
-            .char8 {
-              padding-right: 10px;
-            }
-            .char4 {
-              display: inline-block;
-              width: 15px;
-            }
-
-            /*first-char*/
-            @-webkit-keyframes t1 {
-              0% {background: #FFFFFF;}
-              12.5%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t1 {
-              0% {background: #FFFFFF;}
-              12.5%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t1 {
-              0% {background: #FFFFFF;}
-              12.5%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t1 {
-              0% {background: #FFFFFF;}
-              12.5%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char1 {-webkit-animation: t1 2s infinite;
-            -o-animation: t1 2s infinite;
-            animation: t1 2s infinite;
-            -webkit-animation-delay: 0;
-            -o-animation-delay: 0;
-            animation-delay: 0;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-            
-            /*second-char*/
-            @-webkit-keyframes t2 {
-              0% {background: #FFFFFF;}
-              14.2857142%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t2 {
-              0% {background: #FFFFFF;}
-              14.2857142%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t2 {
-              0% {background: #FFFFFF;}
-              14.2857142%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t2 {
-              0% {background: #FFFFFF;}
-              14.2857142%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char2 {-webkit-animation: t2 1750ms infinite;
-            -o-animation: t2 1750ms infinite;
-            animation: t2 1750ms infinite;
-            -webkit-animation-delay: 250ms;
-            -o-animation-delay: 250ms;
-            animation-delay: 250ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-           /*third char*/
-           @-webkit-keyframes t3 {
-              0% {background: #FFFFFF;}
-              16.66666666666%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t3 {
-              0% {background: #FFFFFF;}
-              16.66666666666%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t3 {
-              0% {background: #FFFFFF;}
-              16.66666666666%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t3 {
-              0% {background: #FFFFFF;}
-              16.66666666666%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char3 {-webkit-animation: t3 1500ms infinite;
-            -o-animation: t3 1500ms infinite;
-            animation: t3 1500ms infinite;
-            -webkit-animation-delay: 500ms;
-            -o-animation-delay: 500ms;
-            animation-delay: 500ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-            /*fourth-char*/
-            @-webkit-keyframes t4 {
-              0% {background: #FFFFFF;}
-              20%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t4 {
-              0% {background: #FFFFFF;}
-              20%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t4 {
-              0% {background: #FFFFFF;}
-              20%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t4 {
-              0% {background: #FFFFFF;}
-              20%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char4 {-webkit-animation: t4 1250ms infinite;
-            -o-animation: t4 1250ms infinite;
-            animation: t4 1250ms infinite;
-            -webkit-animation-delay: 750ms;
-            -o-animation-delay: 750ms;
-            animation-delay: 750ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-            /*5th char*/
-            @-webkit-keyframes t5 {
-              0% {background: #FFFFFF;}
-              25%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t5 {
-              0% {background: #FFFFFF;}
-              25%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t5 {
-              0% {background: #FFFFFF;}
-              25%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t5 {
-              0% {background: #FFFFFF;}
-              25%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char5 {-webkit-animation: t5 1000ms infinite;
-            -o-animation: t5 1000ms infinite;
-            animation: t5 1000ms infinite;
-            -webkit-animation-delay: 1000ms;
-            -o-animation-delay: 1000ms;
-            animation-delay: 1000ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-            /*sixth char*/
-            @-webkit-keyframes t6 {
-              0% {background: #FFFFFF;}
-              33.3333333333%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t6 {
-              0% {background: #FFFFFF;}
-              33.3333333333%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t6 {
-              0% {background: #FFFFFF;}
-              33.3333333333%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t6 {
-              0% {background: #FFFFFF;}
-              33.3333333333%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char6 {-webkit-animation: t6 750ms infinite;
-            -o-animation: t6 750ms infinite;
-            animation: t6 750ms infinite;
-            -webkit-animation-delay: 1250ms;
-            -o-animation-delay: 1250ms;
-            animation-delay: 1250ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-            /*seventh char*/
-            @-webkit-keyframes t7 {
-              0% {background: #FFFFFF;}
-              50%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t7 {
-              0% {background: #FFFFFF;}
-              50%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t7 {
-              0% {background: #FFFFFF;}
-              50%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t7 {
-              0% {background: #FFFFFF;}
-              50%{background: #3297FD;color:#ffffff;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char7 {-webkit-animation: t7 500ms infinite;
-            -o-animation: t7 500ms infinite;
-            animation: t7 500ms infinite;
-            -webkit-animation-delay: 1500ms;
-            -o-animation-delay: 1500ms;
-            animation-delay: 1500ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-            /*eighth char*/
-            @-webkit-keyframes t8 {
-              0% {background: #FFFFFF;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-o-keyframes t8 {
-              0% {background: #FFFFFF;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @-moz-keyframes t8 {
-              0% {background: #FFFFFF;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            @keyframes t8 {
-              0% {background: #FFFFFF;}
-              100% {background: #3297FD;color:#ffffff;}
-            }
-            .char8 {-webkit-animation: t8 250ms infinite;
-            -o-animation: t8 250ms infinite;
-            animation: t8 250ms infinite;
-            -webkit-animation-delay: 1750ms;
-            -o-animation-delay: 1750ms;
-            animation-delay: 1750ms;
-            -webkit-animation-fill-mode: backwards;
-            -o-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;}
-
-
-        </style>
-
-        <script type="text/javascript">
-
-          setInterval(function() {
-              // console.log("asd");
-              $("#text1").html($("#text1").html());
-          }, 2000);
-
-
-        </script>
-
-      </div>
-      
-       <div align="center" class="container" style="display:block;margin-top:-50px;">
-      <a href="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank"> 
-        <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png" style="margin-top:60px;margin-bottom:30px;vertical-align:center;max-width:150px;height:auto;"/>
+    <div align="center" class="container" style="display:block;max-width:400px;margin:10px auto 50px;height:auto;">
+      <div id="div1" style="display:inline-block;max-width:200px;margin-right:20px;">
+        <a href="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank"> 
+        <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png" style="display:inline-block;vertical-align:middle;max-width:150px;height:auto;"/>
       </a>
-      <form style="display: inline" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
-        <button type="submit" class="btn btn-default btn-info" style="display:inline-block;margin-left:50px;margin-top:10px; background:#5CD65C;border-radius:40px;height:50px">
+      </div>
+      <div id="div2" style="display:inline-block;max-width:200px;margin-left:20px;">
+        <form style="display:inline-block;" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
+        <button type="submit" class="btn btn-default btn-info" style="display:inline-block;background:#65E0A9;border-radius:40px;height:50px;">
              Download Beta!
         </button>
       </form>
+      </div>
+    <span style="display:block;margin-top:30px;margin-bottom:20px;text-shadow: 0 0 1px #666;">SCROLL DOWN TO EXPLORE</span>
+    <div id="arrow">
+        <a href="#chat" style="display:block;max-width:200px;text-align:center;margin:50px auto 0;">
+          <img id="arr" src="assets/images/arrowdown.png"/>
+        </a>
+    </div>
+    <div>
+    </div>
+      <script type="text/javascript">
+         $("#arrow").click(function() {
+            $('html, body').animate({
+              scrollTop: $("#chat").offset().top
+          }, 600);
+      });
+      </script>
       
-          </div>
-		  
+    </div>
           </div>
         </div>
     </div><!-- /.carousel-inner -->	
 	 <center>
-	 <a href="#chat" style="display:block;margin-top:-80px;"> <img style="opacity:0.5;" src="assets/images/arrowdown.png"/></a>
 
 	 </center>
 	 </br>
       <!-- Indicators -->
       <div class="carousel-inner" id="chat">
 	
-        <div class="item active" style="background-image:url('assets/images/Elegant_Background-8.jpg');background-repeat:repeat;width:100%;display:block;height:auto;" >
+        <div class="item active" style="background-image:url('assets/images/vichy_@2X.png');background-repeat:repeat;width:100%;display:block;height:auto;-webkit-box-shadow: 0 0 10px white inset;
+        box-shadow: 0 0 10px white inset;" >
 		
         <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
 		</br></br>
     <center>
-          <div id="tagline" style="display:block;color:#ffffff;padding:2px 0;width:100%;text-align:center;text-shadow:0 0 3px #ffffff;font-size:16px;">
+          <div id="video-head" style="display:block;color:black;padding:0 0 40px;width:100%;text-align:center;font-size:42px;font-family:myriadprol;height:auto;">
+            <span>View the Demo</span>
+          </div>
+          <div id="tagline" style="display:block;color:black;padding:2px 0 20px;width:100%;text-align:center;text-shadow:0 0 1px white;font-size:16px;">
             <span>It will only take a minute to watch it</span>
           </div>
-            <iframe frameborder="0" width="420" height="315" src="https://www.youtube.com/embed/7v6oAe1lwdQ"></iframe>
-		  </center>
+          <div id="vid" style="border:none;">
+            <iframe width="420" height="315" style="margin-bottom:30px;border:5px groove #7a7a7a"  src="https://www.youtube.com/embed/7v6oAe1lwdQ"></iframe>
+          </div>
+            <h3 id="h22" style="color:black;text-align:center;text-shadow:0 0 2px white;font-size:54px;font-family:myriadprol;margin-top:10px;padding-bottom:60px;">
+                <em>Let’s make our life simpler.</em></h3>
+		  </center> 
 		  
 	
 	 <center>
-	 <h3 id="h11" style="color:#ffffff;text-shadow:0 0 2px white;text-align:center;line-height:1.2;font-size:54px;font-family:myriadprol;"><em>Why to complicate things?</em></h3>
-   <h3 id="h22" style="color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:54px;font-family:myriadprol;margin-top:10px;">
-	 <em>Let’s make our life simpler.</em></h3>
-	 <h3 id="h33" style="display:block;color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:48px;font-family:mayridprol;padding:5px 5px 10px 5px;margin-top:10px;"><em>Convert any text while working on any platform into actionable tasks.</em></h3></center> 
+	   <!-- <h3 id="h11" style="color:#ffffff;text-shadow:0 0 2px white;text-align:center;line-height:1.2;font-size:54px;font-family:myriadprol;"><em>Why to complicate things?</em></h3>
+     <h3 id="h22" style="color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:54px;font-family:myriadprol;margin-top:10px;">
+	   <em>Let’s make our life simpler.</em></h3>
+	   <h3 id="h33" style="display:block;color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:48px;font-family:mayridprol;padding:5px 5px 10px 5px;margin-top:10px;"><em>Convert any text while working on any platform into actionable tasks.</em></h3> -->
+   </center> 
 	
           
         </div>
@@ -477,28 +295,30 @@
     
         <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
           
-      <div class="container" style="margin-top:0;width:100%;margin-left:auto;margin-right:auto;padding:0;">
+      <div class="container">
       
-      <center><img src="assets/images/Front View.png" style="max-width:100%;height:auto;display:block;padding-top:20px;"></center>
      
-     <div id="heading3" style="clear:both;width:90%;margin-left:auto;margin-right:auto;text-align:center;">
-       <h1 style="color:#000000;line-height:1.5;font-family:myriadprol;padding-top:50px;height:150px;vertical-align:middle;">Making chats more productive and accountable</h1>
+     <div id="heading3" style="height:auto;width:90%;margin-left:auto;margin-right:auto;text-align:center;">
+       <h1 style="color:#000000;font-family:myriadprol;padding-top:50px;display:block;margin-bottom:40px;vertical-align:middle;">Making chats more productive and accountable</h1>
      </div>
      
+      <center>
+          <img src="assets/images/Front View.png" style="max-width:75%;height:auto;display:block;" />
+      </center>
+
       <div id="content3">
         <h4 
           style="color:#000000;
-          margin-top:90px;
-          line-height:1.5;
+          margin-top:40px;
           font-family:myriadprol;
           font-size:22px;
-          width:95%;
+          width:90%;
+          max-width:600px;
           margin-left:auto;
           margin-right:auto;
-          text-align:center;
-          overflow:visible;"
+          text-align:justify;"
         >
-           Now you can mark these actionable thoughts as to do items into your or your coworkers to do lists right from within the chats. Use this fastest to do list as the first point of reference for organizing your tasks on task management tools like asana, producteev, todoist. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.
+           Use this fastest to do list for assigning to do items to yourself and your team right from within the chats. Also, Todoed works as a first point of reference for Producteev or Asana;  however, we notice that for some of us Todoed is more than enough to keep us on top of our tasks. 
       </h4> 
       </div>
       	
@@ -520,7 +340,7 @@
 		 <!--<center><h2 style="margin-top:100px;color:#000000;font-family:myriadprol;line-height:1.4em">Now use this fastest to do list as the first point of reference for organising your tasks on task management tools like asana, producteev, todoist etc. if you use these tools. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h2>
 		</center>-->
 <!--subsriptionform-->
-<h1 id="subs-head" style="color:#000000;line-height:1.5;font-family:myriadprol;width:85%;text-align:center;margin:40px auto 10px auto;font-size:54px;padding-bottom:10px;" >Subscribe to our newsletters and updates!</h1>
+<h1 id="subs-head" style="color:#000000;font-family:myriadprol;width:85%;text-align:center;margin:0 auto 10px auto;font-size:54px;padding-bottom:30px;height:auto;padding-top:60px;" >Subscribe to our newsletters and updates!</h1>
 
 
 <div id="mc_embed_signup" style="
@@ -533,8 +353,21 @@
 <form class="form-inline" role="form" >
   <div class="input-group col-xs-4">
   
- <input type="email" value=""class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline-block;">
-     <button type="submit" class="btn btn-default btn-info" style="display:inline-block;" onclick="message()">Send Invite</button>
+ <input type="email" value="" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline-block;">
+     <button type="submit" id="sendinvi" class="btn btn-default btn-info" style="display:inline-block;border-radius:40px;" onclick="message()">Send Invite</button>
+  </div>
+  <div>
+    <style type="text/css" scoped>
+      #sendinvi{
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+      }
+      #sendinvi:hover{
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+      }
+    </style>
   </div>
 </form>
 
@@ -559,25 +392,29 @@
   </div>
 		<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	  <a href="https://twitter.com/todoed_pwl" target="_blank" style="display:inline-block;">
+
 	  <!---Twitter starts -->
-	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://weblab.preseed.in/projects/todoed/" data-text="@todoed_pwl is a fundamentally different todo listing app by @thepreseed . Check it out." data-hashtags="tasklist" style="display:inline-block;">Tweet</a>
+  
+  <div id="share-btn" style="display:block;max-width:400px;margin:0 auto;text-align:center;height:auto;">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://weblab.preseed.in/projects/todoed/" data-text="@todoed_pwl is a fundamentally different todo listing app by @thepreseed . Check it out." data-hashtags="tasklist" data-align="left">Tweet</a>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-    <br>
-	<a href="https://twitter.com/Todoed_pwl" class="twitter-follow-button" data-show-count="false" data-size="large" style="display:inline-block;">Follow @Todoed_pwl</a>
+  <a href="https://twitter.com/Todoed_pwl" class="twitter-follow-button" data-show-count="false" data-size="large" data-align="right">Follow @Todoed_pwl</a>
+  </div>
+  
+	
 <!---Twitter ends --> 
+
 	  </a>
     <br>
     <br>
     <br>
    <hr size=4 width="50%">
+    <h1 style="color:#000000;font-family:myriadprol;padding-top:10px;display:block;padding-bottom:10px;vertical-align:middle;margin-top:0;">As seen in</h1>
     <div style="margin-top:25px" id="links">
-      <a href="http://thestartuppitch.com/pitches/pitch-for-todoed/" target="_blank">
-          <img src="assets/images/asd.png" alt="the startup pitch" style="padding:20px">
-      </a>
       <a href="http://www.crunchbase.com/product/todoed-2" target="_blank">
           <img src="assets/images/crunch_base.png" alt="crunch base" style="padding:20px">
       </a>
@@ -585,7 +422,7 @@
           <img src="assets/images/launching_next.png" alt="launching next" style="padding:20px">
       </a>
       <a href="http://launchlist.co/item/todoed" target="_blank">
-          <img src="assets/images/launch_list.png" alt="launch list" style="padding:20px">
+          <img src="assets/images/launch_list.png" alt="launch list" style="padding:20px;padding-bottom:30px;">
       </a>
     </div>
     <hr  size=4 width="50%">
@@ -593,9 +430,9 @@
   <div id="bottom-section">
 
    <div id="angellist" style="display:block;width:100%;"> 
-        <div id="hand" style=" width:80px;margin:0 auto;padding-bottom:10px;display:block;" >
+        <div id="hand" style=" max-width:80px;margin:0 auto;padding-bottom:10px;display:block;" >
           <a href="https://angel.co/todoed" target="_blank">
-            <img src="assets/images/angel.jpg" alt="angelList" />
+            <img src="assets/images/angel.jpg" style="width:60%;" alt="angelList" />
           </a>
         </div>
         <div id="angellist-text">
@@ -613,18 +450,17 @@
     <br/><br/>
 
     <div id="feedback">
-      <!-- <a href="https://todoed.freshdesk.com/support/discussions"style="font-size:30px;margin-top=-200px;font-family:myriadprol;color:#5CD65C" target="_blank">Feedback!</a> -->
       
-      <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+      
       <script type="text/javascript">
-          FreshWidget.init("", {"queryString": "&widgetType=popup", "widgetType": "popup", "buttonType": "text", "buttonText": "Feedback", "buttonColor": "white", "buttonBg": "#00CBBA", "alignment": "4", "offset": "400px", "formHeight": "500px", "url": "https://todoed.freshdesk.com"} );
+          FreshWidget.init("", {"queryString": "&widgetType=popup", "widgetType": "popup", "buttonType": "text", "buttonText": "Feedback", "buttonColor": "white", "buttonBg": "#00CBBA", "alignment": "2", "offset": "400px", "formHeight": "500px", "url": "https://todoed.freshdesk.com"} );
       </script>
 
     </div>
       
 
-    <form style="display: inline" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
-        <button type="submit" class="btn btn-default btn-info" style="display:block;margin-top:10px;margin-bottom:30px; background:#5CD65C;border-radius:40px;height:50px">
+    <form style="display: inline" id="again" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get" >
+        <button type="submit" class="btn btn-default btn-info" style="display:block;margin-top:10px;margin-bottom:30px; background:#65E0A9;border-radius:40px;height:50px">
              Download Beta!
         </button>
       </form>
@@ -650,7 +486,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="assets/js/holder.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.lettering.js"></script>
     <!--mailchimpjs-->
     <!-- Begin MailChimp Signup Form -->
 

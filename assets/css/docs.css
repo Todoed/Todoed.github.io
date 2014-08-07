@@ -45,59 +45,31 @@ body {
 }
 
 /* Keep code small in tables on account of limited space */
-.table code {
-  font-size: 13px;
-  font-weight: normal;
-}
 
 /* Outline button for use within the docs */
-.btn-outline {
-  color: #563d7c;
-  background-color: #fff;
-  border-color: #e5e5e5;
-}
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  color: #fff;
-  background-color: #563d7c;
-  border-color: #563d7c;
-}
 
 /* Inverted outline button (white on dark) */
-.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #cdbfe3;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #563d7c;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
-}
+
 /*fontsinclusion*/
 @font-face
 {
 font-family: cabinmedr;
-src: url('fonts/cabinmedr.woff') format('woff');
+src: url('../../fonts/cabinmedr.woff') format('woff');
 }
 @font-face
 {
 font-family: myriadprol;
-src: url('fonts/myriadprol.woff') format('woff');
+src: url('../../fonts/myriadprol.woff') format('woff');
 }
 @font-face
 {
 font-family: myriadpror;
-src: url('fonts/myriadpror.woff') format('woff');
+src: url('../../fonts/myriadpror.woff') format('woff');
 }
 @font-face
 {
 font-family: opensans;
-src: url('fonts/opensans.ttf') format('truetype');
+src: url('../../fonts/OpenSans-Light.ttf') format('truetype');
 }
 /*endsfontinclusion*/
 
@@ -108,103 +80,7 @@ src: url('fonts/opensans.ttf') format('truetype');
  * Turn the `.navbar` at the top of the docs purple.
  */
 
-.bs-docs-nav {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
-  background-color: #563d7c;
-  border-color: #463265;
-  box-shadow: 0 1px 0 rgba(255,255,255,.1);
-}
-.bs-docs-nav .navbar-collapse {
-  border-color: #463265;
-}
-.bs-docs-nav .navbar-brand {
-  color: #fff;
-}
-.bs-docs-nav .navbar-nav > li > a {
-  color: #cdbfe3;
-}
-.bs-docs-nav .navbar-nav > li > a:hover {
-  color: #fff;
-}
-.bs-docs-nav .navbar-nav > .active > a,
-.bs-docs-nav .navbar-nav > .active > a:hover {
-  color: #fff;
-  background-color: #463265;
-}
-.bs-docs-nav .navbar-toggle {
-  border-color: #563d7c;
-}
-.bs-docs-nav .navbar-toggle:hover {
-  background-color: #463265;
-  border-color: #463265;
-}
-
-
-/*
- * Footer
- *
- * Separated section of content at the bottom of all pages, save the homepage.
- */
-
-.bs-footer {
-  padding-top: 40px;
-  padding-bottom: 30px;
-  margin-top: 100px;
-  color: #777;
-  text-align: center;
-  border-top: 1px solid #e5e5e5;
-}
-.footer-links {
-  margin: 10px 0;
-  padding-left: 0;
-}
-.footer-links li {
-  display: inline;
-  padding: 0 2px;
-}
-.footer-links li:first-child {
-  padding-left: 0;
-}
-
-@media (min-width: 768px) {
-  .bs-footer {
-    text-align: left;
-  }
-  .bs-footer p {
-    margin-bottom: 0;
-  }
-}
-
-
-/*
- * Social buttons
- *
- * Twitter and GitHub social action buttons (for homepage and footer).
- */
-
-.bs-social {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.bs-social-buttons {
-  display: inline-block;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-.bs-social-buttons li {
-  display: inline-block;
-  line-height: 1;
-  padding: 5px 8px;
-}
-.bs-social-buttons .twitter-follow-button {
-  width: 225px !important;
-}
-.bs-social-buttons .twitter-share-button {
-  width: 98px !important;
-}
-/* Style the GitHub buttons via CSS instead of inline attributes */
+* Style the GitHub buttons via CSS instead of inline attributes */
 .github-btn {
   border: 0;
   overflow: hidden;
@@ -1216,4 +1092,3 @@ h1[id] {
   margin-top: 15px;
   margin-bottom: 5px;
 }
-
