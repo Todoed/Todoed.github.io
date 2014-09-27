@@ -198,10 +198,12 @@
     }
 
     function ExtInstall() {
-        if (chrome.app.isInstalled)
-            alert("already installed!");
-        else
+        if (chrome.app.isInstalled) {
+            alert("Already Installed!");
+        } else {
             chrome.webstore.install();
+        }
+
     }
     </script>
     <!-- Custom styles for this template -->
@@ -550,11 +552,11 @@
                             </div>
 
 
-                            <form style="display: inline" id="again" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank" method="get">
-                                <button type="submit" class="btn btn-default btn-info" style="display:block;margin-top:10px;margin-bottom:30px; background:#65E0A9;border-radius:40px;height:50px">
-                                    Download Beta!
-                                </button>
-                            </form>
+
+                            <button class="btn btn-default btn-info" onclick="ExtInstall()" id="install-button" style="display:block;margin-top:10px;margin-bottom:30px; background:#65E0A9;border-radius:40px;height:50px;outline:none;">
+                                Download Beta!
+                            </button>
+
 
                             <div id="footer">
                                 <h4 style="font-family:myriadprol">a <a href="http://weblab.preseed.in" target="_blank" style="color:#9ACBD9;font-family:myriadprol">Preseed Web Lab</a> project.
