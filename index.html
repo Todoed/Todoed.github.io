@@ -199,9 +199,10 @@
 
     function ExtInstall() {
         if (chrome.app.isInstalled) {
-            alert("Already Installed!");
+            alert("Already Installed");
         } else {
             chrome.webstore.install();
+            console.log(installing);
         }
 
     }
