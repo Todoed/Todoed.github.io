@@ -197,8 +197,12 @@
         }
     }
 
+    var isInstalledNode = document.createElement('div');
+    isInstalledNode.id = 'extension-is-installed';
+    document.body.appendChild(isInstalledNode);
+
     function ExtInstall() {
-        if (chrome.app.isInstalled) {
+        if (document.getElementById('extension-is-installed')) {
             alert("Already Installed");
         } else {
             chrome.webstore.install();
