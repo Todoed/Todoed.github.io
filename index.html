@@ -175,9 +175,11 @@
         -webkit-box-shadow: 0 0 10px #65E0A9;
         box-shadow: 0 0 10px #65E0A9;
     }
+	.carousel .item{height:300px;}
     </style>
 
     <script type="text/javascript">
+		
     function message() {
         div = document.getElementById('msg');
         div.style.display = "block";
@@ -406,7 +408,7 @@
 
             <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
 
-            <div class="container">
+            <div class="container-fluid">
                 <!--<center><h2 style="margin-top:100px;color:#000000;font-family:myriadprol;line-height:1.4em">Now use this fastest to do list as the first point of reference for organising your tasks on task management tools like asana, producteev, todoist etc. if you use these tools. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h2>
     </center>-->
                 <center>
@@ -427,13 +429,58 @@
                         </a>
                     </div>
                     <hr size=4 width="50%">
-                    <div style="width: 90%;max-width:800px;margin: 10px auto;">
-                        <blockquote class="twitter-tweet" lang="en">
-                            <p><a href="https://twitter.com/todoed_pwl" target="_blank" style="margin-left:-500px">@todoed_pwl</a> Yeah, it works seamlessly! Amazing! Keep up the good work. :)</p>&mdash; Sahil Dua (@sahildua2305) <a href="https://twitter.com/sahildua2305/statuses/486617148656066560">July 8, 2014</a>
-                        </blockquote>
-                    </div>
+					<h1 style="color:#000000;font-family:myriadprol;padding-top:10px;display:block;padding-bottom:10px;vertical-align:middle;margin-top:0;">Twitter love for Todoed</h1>
+					
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:200px;">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<div class="carousel-inner" role="listbox" style="margin-top:0px;">
+							<div class="item active">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p>Just used ToDoed and so far loving it <a href="http://t.co/zV3xH7gvFp">http://t.co/zV3xH7gvFp</a> <a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> <a href="https://twitter.com/Nishchal">@nishchal</a></p>&mdash; Dinesh (@dinwal) <a href="https://twitter.com/dinwal/status/523679988709462016">October 19, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> damn that shits dope downloading now! --&gt; <a href="http://t.co/9reG4tc3n7">http://t.co/9reG4tc3n7</a></p>&mdash; Nate Ruben (@NateBPRuben) <a href="https://twitter.com/NateBPRuben/status/527570791358267392">October 29, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> Is a fantastic new way to keep track of tasks that are sent via non traditional means, check it out! <a href="http://t.co/VTLuj79Vbk">http://t.co/VTLuj79Vbk</a></p>&mdash; startacus (@iamstartacus) <a href="https://twitter.com/iamstartacus/status/524878421009379329">October 22, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@todoed_pwl</a> that looks promising :) all the best!</p>&mdash; Rahul Banker (@bankerrahul) <a href="https://twitter.com/bankerrahul/status/524443196651085825">October 21, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p>@Todoed_14 Yeah, it works seamlessly! Amazing! Keep up the good work. :)</p>&mdash; Sahil Dua (@sahildua2305) <a href="https://twitter.com/sahildua2305/status/486617148656066560">July 8, 2014</a></blockquote>
+								</div>
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="background-image:none;">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="background-image:none;">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
                 </center>
-                
+                <br><br>
                 <!--subsriptionform-->
                 <h1 id="subs-head" style="color:#000000;font-family:myriadprol;width:85%;text-align:center;margin:0 auto 10px auto;font-size:54px;padding-bottom:30px;height:auto;padding-top:60px;">Subscribe to our newsletters and updates!</h1>
 
@@ -614,6 +661,11 @@
                         <!-- Placed at the end of the document so the pages load faster -->
                         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
                         <script src="dist/js/bootstrap.min.js"></script>
+						<script>
+							$('.carousel').carousel({
+								interval: 5000
+							});
+						</script>
                         <script src="assets/js/holder.js"></script>
                         <!--mailchimpjs-->
                         <!-- Begin MailChimp Signup Form -->
