@@ -178,6 +178,20 @@
         box-shadow: 0 0 10px #65E0A9;
     }
 	.carousel .item{height:300px;}
+	.video-container {
+    position: relative;
+    padding-bottom: 46.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
     </style>
 
     <script type="text/javascript">
@@ -404,8 +418,13 @@
                 <div id="tagline" style="display:block;color:black;padding:2px 0 20px;width:100%;text-align:center;text-shadow:0 0 1px white;font-size:16px;">
                     <span>It will only take a minute to watch it</span>
                 </div>
-                <div id="vid" style="border:none;">
-                    <iframe width="420" height="315" style="margin-bottom:30px;border:5px groove #7a7a7a" src="https://www.youtube.com/embed/7v6oAe1lwdQ" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="row clearfix">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                <div id="vid" class="video-container" style="border:none;">
+                    <iframe  style="margin-bottom:30px;border:5px groove #7a7a7a" src="https://www.youtube.com/embed/7v6oAe1lwdQ" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                </div>
                 </div>
                 <h3 id="h22" style="color:black;text-align:center;text-shadow:0 0 2px white;font-size:54px;font-family:myriadprol;margin-top:10px;padding-bottom:60px;">
                     <em>Let’s make our life simpler.</em>
