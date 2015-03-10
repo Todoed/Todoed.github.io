@@ -6,7 +6,7 @@
  #mobisocial{
  
  display:block !important;
- 
+ visibility:visible !important;
  
  }
 	}
@@ -14,6 +14,7 @@
 @media only screen and (max-width: 1400px) {	
 #mobisocial{
 display:none ;
+
 }	
 
 
