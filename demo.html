@@ -1,0 +1,1035 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta property="og:url" content="http://www.todoed.co/" />
+    <meta property="og:site_name" content="Todoed" />
+    <meta property="og:title" content="Todoed" />
+    <meta property="og:image" content="http://i.imgur.com/oZpF8Te.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Turn any selected text, into a delegated todo, with just one right click." />
+    <meta name="description" content="Turn any selected text, into a delegated todo, with just one right click.">
+    <meta name="keywords" content="todoed, preseed, highlight, task, todo, right click, any text, text">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/eijljnfcmaammkjailmoddbelkkdkeme?">
+    <meta name="google-site-verification" content="Gvqp-M7UCHk43FKUMs34anY5hwdYSdOed9BGg5_3Gk0" />
+    <title>Todoed</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+	<link href="assets/css/socialstyle.css" rel="stylesheet" >
+	<!--<link href="assets/css/socialstylemobile.css" rel="stylesheet" > -->
+    <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+	
+    <link rel="shortcut icon" href="http://www.todoed.co/assets/ico/favicon.png">
+	<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+	
+    <style type="text/css">
+    input {
+        max-width: 200px;
+        padding: initial;
+        display: inline;
+    }
+    input[type="submit"] {
+        padding: initial;
+    }
+    #top-text span {
+        display: inline-block;
+        height: 46px;
+        line-height: 40px;
+    }
+    #links a {
+        display: inline-block;
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        border: none;
+        -webkit-transition-duration: 300ms;
+        -o-transition-duration: 300ms;
+        transition-duration: 300ms;
+    }
+    #links a:hover {
+        opacity: .6;
+    }
+    #f {
+        opacity: 1;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #f:hover {
+        opacity: .5;
+        text
+    }
+    #t {
+        opacity: 1;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #t:hover {
+        opacity: .5;
+    }
+    #g {
+        opacity: 1;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #g:hover {
+        opacity: .5;
+    }
+    #arr {
+        opacity: .7;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #arr:hover {
+        opacity: .5;
+    }
+    #arrow img {
+        position: relative;
+        -webkit-animation: arr 2s infinite;
+        -o-animation: arr 2s infinite;
+        animation: arr 2s infinite;
+        -webkit-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;
+    }
+    @-webkit-keyframes arr {
+        0% {
+            top: -40px;
+        }
+        50% {
+            top: 0;
+        }
+        100% {
+            top: -40px;
+        }
+    }
+    @-o-keyframes arr {
+        0% {
+            top: -40px;
+        }
+        50% {
+            top: 0;
+        }
+        100% {
+            top: -40px;
+        }
+    }
+    @-moz-keyframes arr {
+        0% {
+            top: -40px;
+        }
+        50% {
+            top: 0;
+        }
+        100% {
+            top: -40px;
+        }
+    }
+    @keyframes arr {
+        0% {
+            top: -40px;
+        }
+        50% {
+            top: 0;
+        }
+        100% {
+            top: -40px;
+        }
+    }
+    #div2 {
+        border-radius: 40px;
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #div2:hover {
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+    }
+    #again button {
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #again button:hover {
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+    }
+    #sendinvi {
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+    #sendinvi:hover {
+        -webkit-box-shadow: 0 0 10px #65E0A9;
+        box-shadow: 0 0 10px #65E0A9;
+    }
+	.carousel .item{height:300px;}
+	.video-container {
+    position: relative;
+    padding-bottom: 46.25%;
+    padding-top: 35px;
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    </style>
+
+    <script type="text/javascript">
+		
+    function message() {
+        div = document.getElementById('msg');
+        div.style.display = "block";
+    }
+
+    function resize() {
+        var x = window.innerWidth;
+        var y = 0.04 * x;
+        if (750 <= x <= 1500) {
+            document.getElementById('subs-head').style.fontSize = y + 'px';
+            document.getElementById('h22').style.fontSize = y + 'px';
+        }
+        if (x > 1500) {
+            document.getElementById('subs-head').style.fontSize = '60px';
+            document.getElementById('h22').style.fontSize = '60px';
+        }
+        if (x < 750) {
+            document.getElementById('subs-head').style.fontSize = '32px';
+            document.getElementById('h22').style.fontSize = '28px';
+        }
+    }
+
+    // var isInstalledNode = document.createElement('div');
+    // isInstalledNode.id = 'extension-is-installed';
+    // document.body.appendChild(isInstalledNode);
+
+    // function ExtInstall() {
+    //     if (document.getElementById('extension-is-installed')) {
+    //         alert("Already Installed");
+    //     } else {
+    //         chrome.webstore.install();
+    //         console.log("installing");
+    //     }
+    // }
+    </script>
+
+   <!--<script src="//my.hellobar.com/0f15d31ff5fc208c0b1f141cefd9c1026ae6d211.js" type="text/javascript" charset="utf-8" async></script>-->
+   
+
+     <script src="//load.sumome.com/" data-sumo-site-id="ac318dcb8cf95eb8d85da9748cbef602a92a666852c40b6e56c2c9e36a21848d" async="async"></script>
+         <!-- Custom styles for this template -->
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body style="background-color:#FFFFFF;padding-bottom:0;padding-top:10px;" onload="resize()">
+
+
+
+    <!-- FB Like Button Script starts  -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
+	
+	<!--<nav class="social">
+          <ul>
+              <li><a href="https://twitter.com/Todoed_pwl" target="_blank">Twitter <i class="fa fa-twitter"><img id="t" src="assets/images/twitter.png" style="max-width:80%;max-height:80%;height:28px;"></i></a></li>
+              <li><a href="https://www.facebook.com/Todoed.co" target="_blank">Facebook <i class="fa fa-facebook"><img id="f" src="facebook.jpg" style="max-width:80%;max-height:80%;"></i></a></li>
+              <li><a href="https://plus.google.com/110899214789988215156" target="_blank">Google + <i class="fa fa-dribbble"><img id="g" src="assets/images/google-plus-256.png" style="height:28px;"></i></a></li>
+              <li><a href="http://blog.todoed.co/" target="_blank">Tumbler <i class="fa fa-behance"><img id="g" src="assets/images/tumblr-todoed.jpg" style="height:28px;"></i></a></li>
+			  <li><a href="https://www.pinterest.com/todoed/todoed-turn-any-text-into-a-task-with-just-one-rig/" target="_blank">Pinterest <i class="fa fa-behance"><img id="g" src="assets/images/pinterest.png" style="height:28px;"></i></a></li>
+			  <li><a href="https://delicious.com/todoed" target="_blank">Delicious <i class="fa fa-behance"><img id="g" src="assets/images/delicious.png" style="height:28px;"></i></a></li>
+
+          </ul>
+      </nav>-->
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:auto;display:block;margin-bottom:0;">
+        <!-- Indicators -->
+        <div class="carousel-inner" style="height:auto;">
+            <div class="item active" style="background-color:#FFFFFF;height:auto;">
+                <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+
+                <!--
+      <center><img src="assets/images/todoed.png" width="300px" style="margin-top:120px;margin-bottom:30px;vertical-align:center"></center>
+      -->
+                <!--<div id="nave" style="max-height:50px;width:100%;text-align:right;padding:20px 25px 5px 0;display:block;margin-bottom:20px;">
+				<div id="mobisocial" style="padding:0px 25px 5px 0;visibility:hidden;">
+                     <ul style="padding-top:5px;padding-bottom:5px;">
+                        <li style="display:inline-block;padding-right:10px;">
+                            <a href="https://www.facebook.com/Todoed.co" target="_blank">
+                                <img id="f" src="facebook.jpg" style="max-width:80%;max-height:80%;">
+                            </a>
+                        </li>
+                        <li style="display:inline-block;padding-left:10px;padding-right:10px;">
+                            <a href="https://twitter.com/Todoed_pwl" target="_blank">
+                                <img id="t" src="twitter.jpg" style="max-width:80%;max-height:80%;">
+                            </a>
+                        </li>
+                        <li style="display:inline-block;padding-left:10px;padding-right:10px;">
+                            <a href="https://plus.google.com/110899214789988215156" rel="publisher" target="_blank">
+                                <img id="g" src="assets/images/google-plus-256.png" style="height:28px;">
+                            </a>
+                        </li>
+                        <li style="display:inline-block;padding-left:10px;padding-right:10px;">
+                            <a href="http://blog.todoed.co/" target="_blank">
+                                <img id="g" src="assets/images/tumblr-todoed.jpg" style="height:28px;">
+                            </a>
+                        </li>
+						<li style="display:inline-block;padding-left:10px;padding-right:10px;">
+                            <a href="https://www.pinterest.com/todoed/todoed-turn-any-text-into-a-task-with-just-one-rig/" target="_blank">
+                                <img id="g" src="assets/images/pinterest.png" style="height:28px;">
+                            </a>
+                        </li>
+						<li style="display:inline-block;padding-left:10px;padding-right:10px;">
+                            <a href="https://delicious.com/todoed" target="_blank">
+                                <img id="g" src="assets/images/delicious.png" style="height:28px;">
+                            </a>
+                        </li>
+                    </ul> 
+					</div>
+                </div>-->
+
+
+                <div>
+                </div>
+                <center>
+                    <img src="assets/images/todoed_alpha.png" style="clear:right;width:21.961933%;min-width:200px;max-width:300px;margin-top:5%;;margin-bottom:40px;display:inline-block;">
+                </center>
+
+                <center>
+                    <h1 id="top-text" style="line-height:1.2;font-family:opensans;color:#2A3F55;font-size:32px;display:inline-block;margin-bottom:20px;">Turn any selected text, into a delegated todo, with just one right click. </h1>
+                </center>
+                </center>
+                <br/>
+                <br/>
+
+                <div align="center" class="container" style="display:block;margin:10px auto 50px;height:auto;">
+                    <div id="div1" style="display:inline-block;max-width:200px;margin-right:20px;">
+                        <a href="https://chrome.google.com/webstore/detail/eijljnfcmaammkjailmoddbelkkdkeme" target="_blank">
+                            <img src="https://cloud.githubusercontent.com/assets/7721530/3646279/45e93724-10f2-11e4-870e-82a1ff4fda44.png" style="display:inline-block;vertical-align:middle;max-width:150px;height:auto;" />
+                        </a>
+                    </div>
+                    <div id="div2" style="display:inline-block;max-width:200px;margin-left:20px;" >
+                        <form style="display:inline-block;" rel="chrome-webstore-item" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?" method="get" target="_blank">
+                            <button class="btn btn-default btn-info" onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/eijljnfcmaammkjailmoddbelkkdkeme?')" id="install-button" style="display:inline-block;background:#65E0A9;border-radius:40px;padding:10% 17%;outline:none;" >
+                                Download
+                            </button>
+                        </form>
+                    </div>
+                    <!--<span style="display:block;margin-top:30px;margin-bottom:20px;text-shadow: 0 0 1px #666;">SCROLL DOWN TO EXPLORE</span>
+                    <div id="arrow">
+                        <a href="#chat" style="display:block;max-width:200px;text-align:center;margin:50px auto 0;">
+                            <img id="arr" src="assets/images/arrowdown.png" />
+                        </a>
+                    </div>
+                    <div>
+                    </div>
+                    <script type="text/javascript">
+                    $("#arrow").click(function() {
+                        $('html, body').animate({
+                            scrollTop: $("#chat").offset().top
+                        }, 600);
+                    });
+                    </script>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.carousel-inner -->
+    <center>
+
+    </center>
+    </br>
+	
+    <!-- Indicators -->
+
+    <div class="carousel-inner">
+
+        <div class="item active" style="background-color:#FFFFFF;">
+
+            <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+
+            <div class="container">
+
+
+                <div id="heading3" style="height:auto;width:90%;margin-left:auto;margin-right:auto;text-align:center;">
+                    <!--<p style="font-family:myriadprol;padding-top:50px;font-size:22px;">Todoed is a browsing assistant, assisting the user as if everything thought, typed and/or spotted on the web browser is a delegate-able todo item first.</p>-->
+                    <center><p style="font-family:myriadprol;padding-top:50px;font-size:22px;">Todoed is a tool, assisting the user as if everything useful; <br>thought, typed and/or spotted on the web is a delegate-able todo item first.</p></center>
+                    <br><br>
+					<p style="font-family:myriadprol;padding-top:50px;font-size:22px;">One of our favourite current use cases of this app</p>
+                    <h1 style="color:#000000;font-family:myriadprol;display:block;margin-bottom:40px;vertical-align:middle;">Making chats more productive and accountable</h1>
+                </div>
+
+                <center>
+                    <img src="assets/images/Front View.png" style="max-width:95%;height:auto;display:block;" />
+                </center>
+
+                <div id="content3">
+                    <h4 style="color:#000000;text-align:center;
+          margin-top:40px;
+          font-family:myriadprol;
+          font-size:22px;
+          width:90%;
+          max-width:600px;
+          margin-left:auto;
+          margin-right:auto;">
+                        Use this fastest and simplest to do app for assigning to do items to yourself and your team right from within the chats.
+                    </h4>
+                </div>
+				
+				<div style="width:60%;margin-left:auto;margin-right:auto;text-align:justify;margin-top:20px;font-family:myriadprol;">
+					<hr>
+					<h4 style="text-align:center;">Some ways of using this product</h4>
+					<ul style="font-size:18px;list-style-type:circle;margin-bottom:40px;">
+						<li>Use Todoed to create todos/tasks instantly.</li>
+						<li>Use Todoed to delegate todos/tasks instantly, without needing to switch screens or apps.</li>
+						<li>Clip text from anywhere on the browser and convert it into a todo.  Works on any text - gmail, fb, yammer, and absolutely any where on the browser.</li>
+						<li>Just drop down from the chrome extension to view your own todos in the simplest and fastest possible way.</li>
+						<li>Mark todos as important.</li>
+						<li>Edit this text or task on Todoed anytime.</li>
+						<li>Full view page allows you to view todos delegated to and todos delegated by, and also search tasks right there.</li>
+						<li style="color:#bbb;">Use Todoed as a the most unique bookmarking experience (Coming Soon)</li>
+						<li style="color:#bbb;">Use Todoed to add to asana, readability, kippt, pocket, etc. (Coming Soon)</li>
+						<li style="color:#bbb;">Do all of the above on the mobile and all other such devices (Coming Soon)</li>
+					</ul>
+					<h4 style="color:#000;text-align:center;font-family:myriadprol;font-size:22px;
+          width:90%;
+          max-width:600px;
+          margin-left:auto;
+          margin-right:auto;">We are working very hard to turn this into an extraordinary tool for facilitating global productivity one day. This you see, is only the beginning.</h4>
+					<br>
+					<h4 style="font-size:33px;text-align:center;font-family: 'Just Another Hand', cursive;letter-spacing:1px;">By the way, have you ever felt an urge that you should create a to do list for yourself but haven't yet started? Download Todoed and you will find yourself started already.</h4>
+				</div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+	<br>
+	
+    <!-- Indicators -->
+    <div class="carousel-inner" id="chat">
+
+        <div class="item active" style="background-image:url('assets/images/vichy_@2X.png');background-repeat:repeat;width:100%;display:block;height:auto;-webkit-box-shadow: 0 0 10px white inset;
+        box-shadow: 0 0 10px white inset;">
+            </br>
+            </br>
+            <center>
+				
+                <div id="video-head" style="display:block;color:black;padding:0 0 40px;width:52%;text-align:center;font-size:42px;font-family:myriadprol;height:auto;">
+                    <h3 style="margin-bottom:25px;line-height:30px;">When you have a thought or a task, you should be able to instantly not only share it as an instant message or an email, you should also be able to delegate it at the instance of sharing it.</h3>
+					<span>View the Demo</span>
+                </div>
+                <div id="tagline" style="display:block;color:black;padding:2px 0 20px;width:100%;text-align:center;text-shadow:0 0 1px white;font-size:16px;">
+                    <span>It will only take a minute to watch it</span>
+                </div>
+                <div class="row clearfix">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                <div id="vid" class="video-container" style="border:none;">
+                    <iframe  style="margin-bottom:30px;border:5px groove #7a7a7a" src="https://www.youtube.com/embed/7v6oAe1lwdQ" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                </div>
+                </div>
+                <h3 id="h22" style="color:black;text-align:center;text-shadow:0 0 2px white;font-size:54px;font-family:myriadprol;margin-top:10px;padding-bottom:60px;">
+                    <em>Let’s make our life simpler.</em>
+                </h3>
+            </center>
+
+
+            <center>
+                <!-- <h3 id="h11" style="color:#ffffff;text-shadow:0 0 2px white;text-align:center;line-height:1.2;font-size:54px;font-family:myriadprol;"><em>Why to complicate things?</em></h3>
+     <h3 id="h22" style="color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:54px;font-family:myriadprol;margin-top:10px;">
+     <em>Let’s make our life simpler.</em></h3>
+     <h3 id="h33" style="display:block;color:#ffffff;text-align:center;text-shadow:0 0 2px white;line-height:1.5;font-size:48px;font-family:mayridprol;padding:5px 5px 10px 5px;margin-top:10px;"><em>Convert any text while working on any platform into actionable tasks.</em></h3> -->
+            </center>
+        </div>
+    </div>
+    <!-- /.carousel-inner -->
+
+    <!-- Indicators -->
+    <div class="carousel-inner">
+
+        <div class="item active" style="background-color:#ffffff;">
+
+            <!--  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+
+            <div class="container-fluid">
+                <!--<center><h2 style="margin-top:100px;color:#000000;font-family:myriadprol;line-height:1.4em">Now use this fastest to do list as the first point of reference for organising your tasks on task management tools like asana, producteev, todoist etc. if you use these tools. However, we notice that for some of us Todoed is more than enough to keep us on top of our tasks.</h2>
+    </center>-->
+                <center>
+                    <hr size=4 width="50%">
+                    <h1 style="color:#000000;font-family:myriadprol;padding-top:10px;display:block;padding-bottom:10px;vertical-align:middle;margin-top:0;">As seen in</h1>
+                    <div style="margin-top:25px" id="links">
+                        <!--<a href="http://www.crunchbase.com/product/todoed-2" target="_blank">
+                            <img src="assets/images/crunch_base.png" alt="crunch base" style="padding:20px">
+                        </a>-->
+                        <a href="http://www.pcworld.com/article/2910738/todoed-makes-creating-task-lists-as-easy-as-a-right-click.html" target="_blank">
+                            <img src="assets/images/pcworldlogo.jpg" alt="PC World" style="padding:20px">
+                        </a>
+                        <!--<a href="http://launchlist.co/item/todoed" target="_blank">
+                            <img src="assets/images/launch_list.png" alt="launch list" style="padding:20px;padding-bottom:30px;">
+                        </a>-->
+                        <a href="http://yourstory.com/2014/08/smart-to-do-lists-todoed/" target="_blank">
+                            <img src="assets/images/YourStory_Logo.png" alt="yourstory" style="padding:10px;padding-bottom:10px;">
+                        </a>
+                        <a href="http://www.cnet.com/how-to/turn-text-into-tasks-with-chrome-extension-todoed/" target="_blank">
+                            <img src="assets/images/CNET_grey.png" alt="cnet" style="padding:10px;padding-bottom:10px;">
+                        </a>
+                        
+                    </div>
+                    <hr size=4 width="50%">
+					<h1 style="color:#000000;font-family:myriadprol;padding-top:10px;display:block;padding-bottom:10px;vertical-align:middle;margin-top:0;">Twitter love for Todoed</h1>
+					
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:200px;">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<div class="carousel-inner" role="listbox" style="margin-top:0px;">
+							<div class="item active">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p>Just used ToDoed and so far loving it <a href="http://t.co/zV3xH7gvFp">http://t.co/zV3xH7gvFp</a> <a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> <a href="https://twitter.com/Nishchal">@nishchal</a></p>&mdash; Dinesh (@dinwal) <a href="https://twitter.com/dinwal/status/523679988709462016">October 19, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> damn that shits dope downloading now! --&gt; <a href="http://t.co/9reG4tc3n7">http://t.co/9reG4tc3n7</a></p>&mdash; Nate Ruben (@NateBPRuben) <a href="https://twitter.com/NateBPRuben/status/527570791358267392">October 29, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/megha_jh">@megha_jh</a> <a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> just hadn&#39;t a moment to check it out, I like the idea. When will it be available in other browsers?</p>&mdash; Chip Correra (@ChipCorrera) <a href="https://twitter.com/ChipCorrera/status/528627756779966464">November 1, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@todoed_pwl</a> that looks promising :) all the best!</p>&mdash; Rahul Banker (@bankerrahul) <a href="https://twitter.com/bankerrahul/status/524443196651085825">October 21, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p>So far with <a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a>: Wish the extension allowed deadlines. However, simple design &amp; great Chrome extension!&#10;<a href="https://twitter.com/hashtag/startupschallenge?src=hash">#startupschallenge</a> <a href="https://twitter.com/hashtag/startups?src=hash">#startups</a></p>&mdash; Charlotte Lewis (@howdoyoudo22_) <a href="https://twitter.com/howdoyoudo22_/status/516822939556003840">September 30, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> - a wonderful tool for brain storming and getting things done, specially for scattered work environment. Simple Fast Effective !</p>&mdash; Sandip Mukherjee (@SandyAquarian) <a href="https://twitter.com/SandyAquarian/status/540490681240653826">December 4, 2014</a></blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div style="width: 62%;max-width:800px;margin: 10px auto;">
+									<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/Todoed_pwl">@Todoed_pwl</a> Very nice and smartly made app, this is starting to make me more productive. Must use..</p>&mdash; Chirag Dodiya (@chirag_dodiya) <a href="https://twitter.com/chirag_dodiya/status/540811852444225536">December 5, 2014</a></blockquote>
+								</div>
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="background-image:none;">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="background-image:none;">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+                </center>
+                <br><br>
+                <center>
+                <h3>See what <a href="https://twitter.com/Todoed_pwl/timelines/585107612292747264" target="_blank">people are saying</a> about Todoed</h3>
+                </center>
+                 <br>
+                 <br>
+                <!--subsriptionform-->
+                <!--<h4 id="subs-head" style="color:#000000;font-family:myriadprol;width:85%;text-align:center;margin:0 auto 10px auto;font-size:22px;padding-bottom:30px;height:auto;padding-top:60px;">Subscribe to our newsletters and updates!</h4>-->
+                 <h4 style="color:#000000;font-family:myriadprol;width:85%;text-align:center;margin:0 auto 10px auto;font-size:22px;padding-bottom:40px;height:auto;padding-top:60px;">Subscribe to our newsletters and updates!</h4>
+
+                <div id="mc_embed_signup" style="
+          width:100%;
+          margin: 0 auto 0 auto;
+          text-align:center;
+          line-height:0%;">
+                    <form action="http://preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=6d36c66925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="text-align:center;" novalidate>
+
+                        <form class="form-inline" role="form">
+                            <div class="input-group col-xs-4">
+
+                                <input type="email" value="" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your Email ID" style="display:inline-block;border-radius:40px;padding: 20px;">
+                                <button type="submit" id="sendinvi" class="btn btn-default btn-info" style="display:inline-block;border-radius:40px;padding: 8px 13px; margin:5px; font-size:17px;" onclick="message()">Subscribe</button>
+                            </div>
+                        </form>
+
+                        <!--End mc_embed_signup-->
+                        <div id="msg" style="display:none">
+                            <br>
+                            <h5 style="font-family:arial;color:#00CC66;margin-left:20px;">To complete the subscription process, please click the link in the email we just sent you.</h5>
+                        </div>
+                        <br/>
+                        <br/>
+
+                </div>
+                <br>
+                <br>
+                <hr><br><br>
+                
+                <center>
+                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a href="https://twitter.com/todoed_pwl" target="_blank" style="display:inline-block;">
+
+                        <!---Twitter starts -->
+
+                        <div id="share-btn" style="display:block;max-width:400px;margin:0 auto;text-align:center;height:auto;">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://weblab.preseed.in/projects/todoed/" data-text="@todoed_pwl is a fundamentally different todo listing app by @thepreseed . Check it out." data-hashtags="tasklist" data-align="left">Tweet</a>
+
+                            <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                            </script>
+
+                            <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                            </script>
+
+                            <a href="https://twitter.com/Todoed_pwl" class="twitter-follow-button" data-show-count="false" data-size="large" data-align="right">Follow @Todoed_pwl</a>
+                        </div>
+                        <!---Twitter ends -->
+                        <br>
+
+                        <!--F6S Button-->
+
+                        <a href="http://www.f6s.com/todoed?follow=1" target="_blank" title="Follow Todoed on f6s">
+                            <img src="http://www.f6s.com/images/follow-grey.png" border="0" width="72" height="20 " alt="Follow Todoed on f6s" style="width: 72px; height: 20px; padding: 0px; margin: 0px;" />
+                        </a>
+                        
+                        <!--F6S End here-->
+
+                        <div style="display:block;max-width:300px;text-align:center;margin:20px auto 0;" id="fb-like">
+                            <div class="fb-like" id="fl" data-href="https://www.facebook.com/Todoed.co" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-content-align="center" data-share="true" data-colorscheme="light"></div>
+                        </div>
+                        <br>
+                        <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="Todoed" data-url="http://www.todoed.co" data-count="vertical" data-style="facebook">Vote on Hacker News</a>
+<script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+                        <br>
+                        <br>
+                        <br><hr><br><br>
+                        
+                        <p class="marketing-byline" style="text-align:center;font-family:arial;font-size:150%;color:#979797;line-height:150%">
+                            Please fill up our high impact feedback form for Todoed. We will be in a state of gratitude towards you forever.
+                            <br>
+                            <br>
+                            <a href="https://todoed.typeform.com/to/GsVnYq" class="btn btn-info btn-small" target="_blank" style="box-shadow:none;border-radius: 40px; padding: 15px 20px;">
+                                <span style="font-size:24px; font-family:arial;">Feedback Form</span>
+                            </a>
+                        </p>
+                        <br><br><hr><br><br>
+                        
+                        <div id="bottom-section">
+							<div id="todoed-story" style="display:block;max-width:500px;margin:0 auto;">
+								<font size="55px" style="font-size:24px;padding:10px 0px 30px 0px;display:block;max-width:400px;margin:0 auto;text-align:center;">
+									<a href="http://todoed.teampage.io/" target="_blank" style="text-decoration:none;">Souls</a> behind Todoed
+								</font>
+							</div>
+							
+                            <div id="angellist" style="display:block;width:100%;">
+                                <div id="hand" style=" max-width:80px;margin:0 auto;padding-bottom:10px;display:block;">
+                                    <a href="https://angel.co/todoed" target="_blank">
+                                        <img src="assets/images/angel.jpg" style="width:60%;" alt="angelList" />
+                                    </a>
+                                </div>
+                                <div id="angellist-text">
+                                    <h4 style="width:80%;margin:0 auto;">
+                                        <a href="https://angel.co/todoed" target="_blank" style="text-decoration:none;">
+											Also, meet us on AngelList
+										</a>
+                                    </h4>
+                                </div>
+                            </div>
+                            
+                            <div id="todoed-story" style="display:block;max-width:500px;margin:0 auto;">
+                                <a href="https://medium.com/preseed-web-lab/dd71f9ec0a01" style="text-decoration:none;width:400px;" target="_blank">
+                                    <font size="55px" style="font-family: myriadprol;font-size:32px;padding-top:20px;display:block;max-width:400px;margin:0 auto;text-align:center;">Story behind
+                                        <strong>Todoed</strong>
+                                    </font>
+                                </a>
+                            </div>
+
+                            <br/>
+                            <br/>
+
+                            <div id="feedback">
+
+
+                                <script type="text/javascript">
+                                FreshWidget.init("", {
+                                    "queryString": "&widgetType=popup",
+                                    "widgetType": "popup",
+                                    "buttonType": "text",
+                                    "buttonText": "Feedback",
+                                    "buttonColor": "white",
+                                    "buttonBg": "#00CBBA",
+                                    "alignment": "2",
+                                    "offset": "400px",
+                                    "formHeight": "500px",
+                                    "url": "https://todoed.freshdesk.com"
+                                });
+                                </script>
+
+                            </div>
+
+
+                            <form style="display:inline-block;" rel="chrome-webstore-item" action="https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?" method="get" target="_blank">
+                                <button class="btn btn-default btn-info" onclick="ExtInstall()" id="install-button" style="display:block;margin-top:10px;margin-bottom:30px; background:#65E0A9;border-radius:40px;height:50px;outline:none;">
+                                    Download
+                                </button>
+                            </form>
+
+                            <div id="footer">
+                                <h4 style="font-family:myriadprol">a
+                                    <a href="http://weblab.preseed.in" target="_blank" style="font-family:myriadprol">
+                                        <strong>Preseed Web Lab</strong>
+                                    </a>project.
+                                    <br/>
+                                    <br/>
+                                    <small><a href="http://preseed.in/legal" target="_blank" title=""> Copyright © 2015 Preseed Ventures Pvt. Ltd. | All Rights Reserved</a>
+                                    </small>
+                                </h4>
+
+                            </div>
+
+
+
+                            </br>
+                        </div>
+
+
+
+
+
+                        <!-- Bootstrap core JavaScript
+    ================================================== -->
+                        <!-- Placed at the end of the document so the pages load faster -->
+                        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                        <script src="dist/js/bootstrap.min.js"></script>
+						<script>
+							$('.carousel').carousel({
+								interval: 5000
+							});
+						</script>
+                        <script src="assets/js/holder.js"></script>
+                        <!--mailchimpjs-->
+                        <!-- Begin MailChimp Signup Form -->
+
+                        <script type="text/javascript">
+                        var fnames = new Array();
+                        var ftypes = new Array();
+                        fnames[0] = 'EMAIL';
+                        ftypes[0] = 'email';
+                        fnames[1] = 'FNAME';
+                        ftypes[1] = 'text';
+                        fnames[2] = 'LNAME';
+                        ftypes[2] = 'text';
+                        try {
+                            var jqueryLoaded = jQuery;
+                            jqueryLoaded = true;
+                        } catch (err) {
+                            var jqueryLoaded = false;
+                        }
+                        var head = document.getElementsByTagName('head')[0];
+                        if (!jqueryLoaded) {
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+                            head.appendChild(script);
+                            if (script.readyState && script.onload !== null) {
+                                script.onreadystatechange = function() {
+                                    if (this.readyState == 'complete') mce_preload_check();
+                                }
+                            }
+                        }
+
+                        var err_style = '';
+                        try {
+                            err_style = mc_custom_error_style;
+                        } catch (e) {
+                            err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+                        }
+                        var head = document.getElementsByTagName('head')[0];
+                        var style = document.createElement('style');
+                        style.type = 'text/css';
+                        if (style.styleSheet) {
+                            style.styleSheet.cssText = err_style;
+                        } else {
+                            style.appendChild(document.createTextNode(err_style));
+                        }
+                        head.appendChild(style);
+                        setTimeout('mce_preload_check();', 250);
+
+                        var mce_preload_checks = 0;
+
+                        function mce_preload_check() {
+                            if (mce_preload_checks > 40) return;
+                            mce_preload_checks++;
+                            try {
+                                var jqueryLoaded = jQuery;
+                            } catch (err) {
+                                setTimeout('mce_preload_check();', 250);
+                                return;
+                            }
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+                            head.appendChild(script);
+                            try {
+                                var validatorLoaded = jQuery("#fake-form").validate({});
+                            } catch (err) {
+                                setTimeout('mce_preload_check();', 250);
+                                return;
+                            }
+                            mce_init_form();
+                        }
+
+                        function mce_init_form() {
+                            jQuery(document).ready(function($) {
+                                var options = {
+                                    errorClass: 'mce_inline_error',
+                                    errorElement: 'div',
+                                    onkeyup: function() {},
+                                    onfocusout: function() {},
+                                    onblur: function() {}
+                                };
+                                var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+                                $("#mc-embedded-subscribe-form").unbind('submit'); //remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+                                options = {
+                                    url: 'http://preseed.us3.list-manage.com/subscribe/post-json?u=6d760d307e7d9e29e2344532b&id=6d36c66925&c=?',
+                                    type: 'GET',
+                                    dataType: 'json',
+                                    contentType: "application/json; charset=utf-8",
+                                    beforeSubmit: function() {
+                                        $('#mce_tmp_error_msg').remove();
+                                        $('.datefield', '#mc_embed_signup').each(
+                                            function() {
+                                                var txt = 'filled';
+                                                var fields = new Array();
+                                                var i = 0;
+                                                $(':text', this).each(
+                                                    function() {
+                                                        fields[i] = this;
+                                                        i++;
+                                                    });
+                                                $(':hidden', this).each(
+                                                    function() {
+                                                        var bday = false;
+                                                        if (fields.length == 2) {
+                                                            bday = true;
+                                                            fields[2] = {
+                                                                'value': 1970
+                                                            }; //trick birthdays into having years
+                                                        }
+                                                        if (fields[0].value == 'MM' && fields[1].value == 'DD' && (fields[2].value == 'YYYY' || (bday && fields[2].value == 1970))) {
+                                                            this.value = '';
+                                                        } else if (fields[0].value == '' && fields[1].value == '' && (fields[2].value == '' || (bday && fields[2].value == 1970))) {
+                                                            this.value = '';
+                                                        } else {
+                                                            if (/\[day\]/.test(fields[0].name)) {
+                                                                this.value = fields[1].value + '/' + fields[0].value + '/' + fields[2].value;
+                                                            } else {
+                                                                this.value = fields[0].value + '/' + fields[1].value + '/' + fields[2].value;
+                                                            }
+                                                        }
+                                                    });
+                                            });
+                                        $('.phonefield-us', '#mc_embed_signup').each(
+                                            function() {
+                                                var fields = new Array();
+                                                var i = 0;
+                                                $(':text', this).each(
+                                                    function() {
+                                                        fields[i] = this;
+                                                        i++;
+                                                    });
+                                                $(':hidden', this).each(
+                                                    function() {
+                                                        if (fields[0].value.length != 3 || fields[1].value.length != 3 || fields[2].value.length != 4) {
+                                                            this.value = '';
+                                                        } else {
+                                                            this.value = 'filled';
+                                                        }
+                                                    });
+                                            });
+                                        return mce_validator.form();
+                                    },
+                                    success: mce_success_cb
+                                };
+                                $('#mc-embedded-subscribe-form').ajaxForm(options);
+
+
+                            });
+                        }
+
+                        function mce_success_cb(resp) {
+                            $('#mce-success-response').hide();
+                            $('#mce-error-response').hide();
+                            if (resp.result == "success") {
+                                $('#mce-' + resp.result + '-response').show();
+                                $('#mce-' + resp.result + '-response').html(resp.msg);
+                                $('#mc-embedded-subscribe-form').each(function() {
+                                    this.reset();
+                                });
+                            } else {
+                                var index = -1;
+                                var msg;
+                                try {
+                                    var parts = resp.msg.split(' - ', 2);
+                                    if (parts[1] == undefined) {
+                                        msg = resp.msg;
+                                    } else {
+                                        i = parseInt(parts[0]);
+                                        if (i.toString() == parts[0]) {
+                                            index = parts[0];
+                                            msg = parts[1];
+                                        } else {
+                                            index = -1;
+                                            msg = resp.msg;
+                                        }
+                                    }
+                                } catch (e) {
+                                    index = -1;
+                                    msg = resp.msg;
+                                }
+                                try {
+                                    if (index == -1) {
+                                        $('#mce-' + resp.result + '-response').show();
+                                        $('#mce-' + resp.result + '-response').html(msg);
+                                    } else {
+                                        err_id = 'mce_tmp_error_msg';
+                                        html = '<div id="' + err_id + '" style="' + err_style + '"> ' + msg + '</div>';
+
+                                        var input_id = '#mc_embed_signup';
+                                        var f = $(input_id);
+                                        if (ftypes[index] == 'address') {
+                                            input_id = '#mce-' + fnames[index] + '-addr1';
+                                            f = $(input_id).parent().parent().get(0);
+                                        } else if (ftypes[index] == 'date') {
+                                            input_id = '#mce-' + fnames[index] + '-month';
+                                            f = $(input_id).parent().parent().get(0);
+                                        } else {
+                                            input_id = '#mce-' + fnames[index];
+                                            f = $().parent(input_id).get(0);
+                                        }
+                                        if (f) {
+                                            $(f).append(html);
+                                            $(input_id).focus();
+                                        } else {
+                                            $('#mce-' + resp.result + '-response').show();
+                                            $('#mce-' + resp.result + '-response').html(msg);
+                                        }
+                                    }
+                                } catch (e) {
+                                    $('#mce-' + resp.result + '-response').show();
+                                    $('#mce-' + resp.result + '-response').html(msg);
+                                }
+                            }
+                        }
+                        </script>
+                        <!--End mc_embed_signup-->
+                        <!--mailchimpjsends-->
+                        <script>
+                        (function(i, s, o, g, r, a, m) {
+                            i['GoogleAnalyticsObject'] = r;
+                            i[r] = i[r] || function() {
+                                (i[r].q = i[r].q || []).push(arguments)
+                            }, i[r].l = 1 * new Date();
+                            a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                            a.async = 1;
+                            a.src = g;
+                            m.parentNode.insertBefore(a, m)
+                        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                        ga('create', 'UA-54621105-1', 'auto');
+                        ga('send', 'pageview');
+                        </script>
+
+                        <!--<button onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/eijljnfcmaammkjailmoddbelkkdkeme', function(){console.log('success');}, function(error){console.log(error);});">Download Todoed</button>
+-->
+
+                        <!-- Start of StatCounter Code for Default Guide -->
+                        <script type="text/javascript">
+                        var sc_project = 9973696;
+                        var sc_invisible = 1;
+                        var sc_security = "86594b50";
+                        var scJsHost = (("https:" == document.location.protocol) ?
+                            "https://secure." : "http://www.");
+                        document.write("<sc" + "ript type='text/javascript' src='" +
+                            scJsHost +
+                            "statcounter.com/counter/counter.js'></" + "script>");
+                        </script>
+                        <noscript>
+                            <div class="statcounter">
+                                <a title="shopify
+analytics tool" href="http://statcounter.com/shopify/" target="_blank">
+                                    <img class="statcounter" src="http://c.statcounter.com/9973696/0/86594b50/1/" alt="shopify analytics tool">
+                                </a>
+                            </div>
+                        </noscript>
+                        <!-- End of StatCounter Code for Default Guide -->
+
+</body>
+
+</html>
