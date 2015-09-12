@@ -19,18 +19,11 @@
 	display: flex;
 	align-items:baseline;
 	flex-wrap:wrap;
-	justify-content:center; 
+	justify-content:center;
 
-}
-.sub 
-{
-	margin-left:10px;
-	margin-right:10px;
 }
 .sub img
 {
-	margin-left: 10px;
-	margin-right: 10px;
 	margin-top: 25px;
 	opacity: 0.4;
 }
