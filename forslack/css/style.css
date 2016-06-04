@@ -1145,15 +1145,16 @@ ul.footer-nav li a
 {
 	.landing .land-shot
 	{
-	width: 435px;
-    height: 320px;
-    margin: 0 auto;
-    display: block;
-    background-image: url(../img/lnd@2x.png);
-    background-repeat: no-repeat;
-    background-size: 435px 320px;
-    background-position: center;
+		width: 312px;
+		height: 230px;
+		margin: 0 auto;
+		display: block;
+		background-image: url(../img/lnd@2x.png);
+		background-repeat: no-repeat;
+		background-size: 312px 230px;
+		background-position: center;
 	}
+
 }
 @media only screen and (max-width: 980px)
 {
