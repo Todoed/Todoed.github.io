@@ -95,10 +95,13 @@ p
     padding: 0;
     margin: 0
 }
+<<<<<<< HEAD
 a:focus
 {
 	outline: transparent;
 }
+=======
+>>>>>>> origin/master
 .flex-grid
 {
     box-sizing: border-box;
