@@ -1,0 +1,1 @@
+var className,doc,elm;className="scroll-body",elm=$("body"),doc=$(document),doc.scroll(function(){return elm.toggleClass(className,doc.scrollTop()>=20)});
