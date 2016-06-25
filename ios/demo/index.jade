@@ -1,0 +1,250 @@
+html
+	
+	head
+		include head.jade
+	body
+		#fb-root
+		script.
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		nav
+			.container
+				.logo
+					p 
+						| Todoed
+						span   Alpha
+				.sign-up
+					a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank')
+						| Available in the
+						span Chrome Web Store
+		section.landing
+			h1
+				| Turn 
+				span 
+					|any selected text
+					img(src='img/curs.svg')
+				|  into a delegated todo, with just one right click.
+			div.land-shot
+			p Todoed is a productivity assistant, assisting the user as if everything thought, typed and/or spotted anywhere or on any device is a delegate-able todo item first.
+		section.blue
+			.container 
+				h2
+					| Todoed makes a perfect productivity companion for 
+					span.slack
+				img(src='img/todsh@2x.png' alt='todoed screenshot')
+		section.features
+			div
+				img(src='img/f1@2x.png')
+				h3 Mark any text as a to-do
+				p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+			div
+				img(src='img/f2@2x.png')
+				h3 Make chats more productive and accountable
+				p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+			div
+				img(src='img/f3@2x.png')
+				h3 Record your own thoughts
+				p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+			div
+				img(src='img/f4@2x.png')
+				h3 Assign tasks and collaborate
+				p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+		section.call
+			.container 
+				h2 Get Todoed Now
+				p It's forever free
+				a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank')
+					| Available in the
+					span Chrome Web Store
+		section.do-more
+			.cases
+				h2 Do Even More
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+				div
+					h3 Something you can do
+					p Todoed let's you mark any text, any where, any time and turn it into a to-do list item.
+			p.quote
+				|Have you ever felt an urge that you should create a to do list for yourself but haven't yet started? Download Todoed and you will find yourself started already.
+		section.pricing
+			h2 Pricing
+			.container
+				div
+					h3 Starter
+					p.price.free free forever
+					p 
+						| 5
+						span  users
+						span.divider |
+					p 
+						|500
+						span  tasks
+					a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank').btn Get Started
+				div
+					h3 Professional
+					p.price 
+						span $
+						| 9
+						span / year
+					p 
+						| 10
+						span  users
+						span.divider |  
+					p 
+						|1000
+						span tasks
+					a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank').btn Get Started
+				div
+					h3 Team
+					p.price 
+						span $
+						| 29
+						span / year
+					p 
+						| unlimited
+						span  users / tasks
+					a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank').btn Get Started
+			a(href='') Terms of Use
+		section.pre-footer
+			.featured
+				h2 Featured in
+				.featured-gallery
+					a(href='http://www.pcworld.com/article/2910738/todoed-makes-creating-task-lists-as-easy-as-a-right-click.html' target='_blank')
+						img(src='img/t1.png')
+					a(href='http://yourstory.com/2014/08/smart-to-do-lists-todoed/' target='_blank')
+						img(src='img/t2.png')
+					a(href='http://www.cnet.com/how-to/turn-text-into-tasks-with-chrome-extension-todoed/' target='_blank')
+						img(src='img/t3.png')
+			.featured
+				h2 Twitter Love for Todoed
+				div 
+					blockquote.twitter-tweet(lang='en')
+						p(lang='en', dir='ltr')
+							a(href='https://twitter.com/Todoed_pwl') @todoed_pwl
+							|  Love the extension! Get this bad boy integrated with 
+							a(href='https://twitter.com/trello') @trello
+							|  and I'd use it every single day 
+							a(href='https://twitter.com/hashtag/productivity?src=hash') #productivity
+						| — Chris Buttenham (@chrisbuttenham) 
+						a(href='https://twitter.com/chrisbuttenham/status/605477055828926464') June 1, 2015
+					script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+		section.pre-footer-alt
+			h2 Subscribe to our newsletter
+			div
+				// Begin MailChimp Signup Form
+				link(href='//cdn-images.mailchimp.com/embedcode/classic-081711.css', rel='stylesheet', type='text/css')
+				style(type='text/css').
+					#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+					/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+					We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+				#mc_embed_signup
+					form#mc-embedded-subscribe-form.validate(action='//preseed.us8.list-manage.com/subscribe/post?u=8d28ba8a8bc00bd59a96501f8&id=ba59955bc4', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+						#mc_embed_signup_scroll
+							h2 Subscribe to our mailing list
+							.indicates-required
+								span.asterisk *
+								|indicates required
+							.mc-field-group
+								label(for='mce-EMAIL')
+									|Email Address  
+									span.asterisk *
+								input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+							#mce-responses.clear
+								#mce-error-response.response(style='display:none')
+								#mce-success-response.response(style='display:none')
+							// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+							div(style='position: absolute; left: -5000px;')
+								input(type='text', name='b_8d28ba8a8bc00bd59a96501f8_ba59955bc4', tabindex='-1', value='')
+							.clear
+								input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+					script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+					script(type='text/javascript').
+						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+					// End mc_embed_signup
+
+				//form
+					input(placeholder='Enter your email address...')
+					button.btn Subscribe
+					p Powered by Mailchimp. You can opt out any time.
+		section.pre-footer.sharing
+			h2 Spread the word...
+			div 
+				a.twitter-share-button(href='https://twitter.com/share', data-url='http://todoed.co', data-via='todoed_pwl', data-size='large', data-hashtags='todoed') Tweet
+				script.
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+			div
+				a.twitter-follow-button(href='https://twitter.com/Todoed_pwl', data-show-count='false', data-size='large') Follow @Todoed_pwl
+				script.
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+			div
+				.fb-like(data-href='https://todoed/co', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+
+		section.pre-footer-alt
+			h2 We would love to hear your feedback...
+			p Please fill up our high impact feedback form for Todoed. We will be in a state of gratitude towards you forever.
+			a.btn(href='https://todoed.typeform.com/to/GsVnYq' target='_blank') Feedback Form
+		section.call
+			h2 Get Todoed Now
+			p It's forever free
+			a(href='https://chrome.google.com/webstore/detail/todoed/eijljnfcmaammkjailmoddbelkkdkeme?utm_source=gmail' target='_blank')
+				| Available in the
+				span Chrome Web Store
+		footer
+			.logo
+				p 
+					|Todoed
+					span Beta
+			div
+				h2 About
+				a(href='http://todoed.teampage.io/' target='_blank') Team
+				a(href='https://angel.co/todoed' target='_blank') Meet us on AngelList
+				a(href='todoed-presskit.zip' target='_blank') Download press kit
+			div.social
+				h2 Connect
+				a(href='http://twitter.com/todoed_pwl' target='_blank') 
+				a(href='https://www.facebook.com/Todoed.co' target='_blank')
+			div.terms
+				p 
+					| A 
+					a(href='http://weblab.preseed.in/' target='_blank') Preseed Web Lab
+					|  project.
+				p Copyright © 2015 Preseed Ventures Pvt. Ltd. | All Rights Reserved
+				a(href='') Terms of Use
+				a(href='') Privacy Policy
+			.fm
+				a(href='http://florianmenevis.com/' target='_blank') 
+					| Designed by 
+					span Florian Menevis
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+		script(src='js/scroll.js')
+
+
+
+
+
+					
+
+
+
+
+
+
