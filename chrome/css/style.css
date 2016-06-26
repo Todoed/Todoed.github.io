@@ -401,14 +401,7 @@ nav.scroll .logo span.text
 }
 .sign-up a
 {
-    background-color: #4286ec;
-    padding: 16px 24px 16px 68px;
-    border-radius: 4px;
-    color: #fff;
-    background-image: url(../img/chrw.svg);
-    background-repeat: no-repeat;
-    background-size: 42px;
-    background-position: 16px 50%;
+    margin-top: -5px;
     display: inline-block;
     line-height: 1.2em;
     text-align: left;
@@ -518,7 +511,6 @@ nav.scroll .logo span.text
 {
     max-width: 100%;
     height: auto;
-    margin: 24px auto -120px auto
 }
 .call .slack
 {
@@ -577,7 +569,11 @@ nav.scroll .logo span.text
 .call p
 {
     margin: 0 auto 16px auto;
-    color: #fff
+    color: #fff;
+}
+call
+{
+    color: #fff;
 }
 .do-more h2
 {
@@ -597,7 +593,6 @@ nav.scroll .logo span.text
 {
     max-width: 100%;
     height: auto;
-    margin: 24px auto -120px auto
 }
 .pricing .slack
 {
@@ -646,7 +641,7 @@ nav.scroll .logo span.text
 {
     display: inline-block;
     line-height: 1em;
-    color: #1f2634
+    color: #ffffff;
 }
 .pricing p span
 {
@@ -985,6 +980,34 @@ ul.footer-nav li a
     right: -5px;
     top: -6px;
     display: block
+}
+.download a
+{
+    font-size: 12px;
+    background-color: #000000;
+    padding: 5px 5px 5px 40px;
+    border-radius: 4px;
+    color: #fff;
+    background-image: url(../img/chrw.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 12px 50%;
+    display: inline-block;
+    line-height: 1.2em;
+    text-align: left;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.download a span
+{
+    font-size: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.ios-download
+{
+    margin-top: -12.9px;
 }
 @media only screen and (min-width: 980px)
 {
